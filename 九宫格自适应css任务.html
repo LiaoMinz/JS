@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>css01-九宫格</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        .main{
+            width: 100%;
+            margin: 0 3%;
+        }
+        .main div{
+            width: 26%;
+            padding-bottom: 26%;
+            float: left;
+            background-color: rgb(253, 187, 6);
+            margin: 2.5%;
+            border-radius: 10%;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        /*
+            原来全用百分比设置才能达到自适应效果  之前border-radius 和 margin 并没有使用百分比 
+            查阅资料发现 在w3c 文档中可以看到padding-bottom的%是继承自父元素的宽度的，而且padding的其他三个位置也是这样。、
+            width和padding-bottom都继承自同一对象，正方形格子就可以自适应了。
+        */
+      
+    </style>
+</head>
+<body>
+    <div class="main clearfix">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: #68cdd5;
+}
+
+.content .icon {
+    width: 100%;
+    height: 8.3%;
+}
+
+.content .icon a {
+    position: absolute;
+    top: 2.9%;
+    left: 3.7%;
+    display: block;
+    width: 17.5%;
+    height: 11.4%;
+    background: url('../image/icon3.png') no-repeat;
+    /*  */
+}
+
+
+/*顶部结束*/
+
+.content .logo {
+    width: 100%;
+    height: 22.2%;
+}
+
+.content .logo h1 {
+    width: 85%;
+    height: 100%;
+    /* width: 187px;
+    height: 103px; */
+    margin: 0 auto;
+    background: url('../image/logo.png') no-repeat center center;
+    background-size: 18%;
+}
+
+
+/*logo 结束*/
+
+.content .text {
+    width: 100%;
+    height: 37%;
+    /* position: relative; */
+}
+
+.content .text p {
+    /* position: absolute;
+    top: 30%;
+    left: 35%; */
+    width: 45%;
+    height: 37%;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 55px;
+    /* text-align: center; */
+}
+
+.content .user {
+    width: 100%;
+    height: 33.4%;
+}
+
+.content .user ul {
+    width: 100%;
+    height: 100%;
+}
+
+.content .user li {
+    width: 50%;
+    height: 45.1%;
+    /* background-color: red; */
+    float: left;
+}
+
+.content .user li a {
+    line-height: 14.5em;
+    display: block;
+    width: 32%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-size: 50%;
+}
+
+.user li .left {
+    background: url('../image/icon1.png') no-repeat center center;
+}
+
+.user li .right {
+    background: url('../image/icon2.png') no-repeat center center;
+}
+
+.user li span {
+    display: inline;
+}
