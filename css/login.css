@@ -17,7 +17,7 @@ header {
     margin: 2.5%;
     font-size: 1.8rem;
     color: #fff;
-    line-height: 8.9rem;
+    line-height: 5.9rem;
 }
 
 .center {
@@ -35,7 +35,7 @@ header {
 
 .login p {
     width: 100%;
-    line-height: 8.9rem;
+    line-height: 5.9rem;
     padding-bottom: 0%;
 }
 
@@ -45,7 +45,7 @@ header {
     background-color: #fff;
     width: 9%;
     margin-top: 2%;
-    height: 8.9rem;
+    height: 5.9rem;
     background-image: url("../image/iphone.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -60,7 +60,7 @@ header {
     /* background-color: rgb(253, 187, 6); */
     font-size: 1.8rem;
     color: #000;
-    height: 8.9rem;
+    height: 5.9rem;
     text-indent: 5.4rem;
     margin-top: 2%;
 }
@@ -69,7 +69,7 @@ header {
     display: block;
     position: absolute;
     width: 1%;
-    height: 8.9rem;
+    height: 5.9rem;
     background-image: url("../image/svl.png");
     background-position: 0px 0px;
     background-repeat: no-repeat;
