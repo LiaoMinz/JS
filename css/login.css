@@ -48,7 +48,7 @@ header {
     height: 5.9rem;
     background-image: url("../image/iphone.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 20px center;
     background-size: 35%;
     /* border-left: 1px solid #eaedee; */
 }
@@ -71,7 +71,7 @@ header {
     width: 1%;
     height: 5.9rem;
     background-image: url("../image/svl.png");
-    background-position: 0px 0px;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
@@ -80,8 +80,8 @@ header {
 }
 
 .user span {
-    top: 25%;
-    left: 8%;
+    top: 6%;
+    left: 14%;
 }
 
 .password i {
@@ -89,8 +89,8 @@ header {
 }
 
 .password span {
-    top: 75%;
-    left: 8%;
+    top: 56%;
+    left: 14%;
 }
 
 .btn input {
