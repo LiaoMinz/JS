@@ -63,6 +63,7 @@ header {
     height: 5.9rem;
     text-indent: 5.4rem;
     margin-top: 2%;
+    outline: none;
 }
 
 .login span {
