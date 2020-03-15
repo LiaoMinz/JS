@@ -15,7 +15,7 @@ header {
     float: left;
     /* background-color: rgb(253, 187, 6); */
     margin: 2.5%;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: #fff;
     line-height: 8.9rem;
 }
@@ -49,7 +49,7 @@ header {
     background-image: url("../image/iphone.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 20%;
+    background-size: 35%;
     /* border-left: 1px solid #eaedee; */
 }
 
@@ -58,7 +58,7 @@ header {
     display: block;
     width: 90%;
     /* background-color: rgb(253, 187, 6); */
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: #000;
     height: 15rem;
     text-indent: 5.4rem;
@@ -108,7 +108,7 @@ header {
     display: block;
     text-align: right;
     text-decoration: underline;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: #5fc0cd;
     vertical-align: text-bottom;
 }
