@@ -45,7 +45,7 @@ header {
     background-color: #fff;
     width: 9%;
     margin-top: 2%;
-    height: 15rem;
+    height: 8.9rem;
     background-image: url("../image/iphone.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -60,7 +60,7 @@ header {
     /* background-color: rgb(253, 187, 6); */
     font-size: 2.8rem;
     color: #000;
-    height: 15rem;
+    height: 8.9rem;
     text-indent: 5.4rem;
     margin-top: 2%;
 }
@@ -69,7 +69,7 @@ header {
     display: block;
     position: absolute;
     width: 1%;
-    height: 15rem;
+    height: 8.9rem;
     background-image: url("../image/svl.png");
     background-position: 0px 0px;
     background-repeat: no-repeat;
