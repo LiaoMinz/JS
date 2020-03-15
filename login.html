@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/reset01.css">
+    <link rel="stylesheet" href="css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=NO">
+    <title>登入页</title>
+    <script>
+        window.onload = function() {
+            var oBtn = document.querySelector('.btn input')
+            var oImg = document.getElementById('img');
+            var timer = null;
+            clearTimeout(timer);
+            oBtn.onclick = function() {
+                oImg.style.display = 'block';
+                timer = setTimeout(function() {
+                    oImg.style.display = 'none';
+                }, 1000)
+
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="head clearfiex ">
+            <a class="left" href="#">注册</a>
+            <a class="center" href="#">登入</a>
+            <a class="right" href="#">关闭</a>
+        </div>
+    </header>
+    <section>
+        <div class="login">
+            <p class="user clearfiex">
+                <i class="left">
+
+                </i>
+                <span>
+
+                </span>
+                <input class="left" type="text" placeholder="请输入手机号">
+            </p>
+            <p class="password clearfiex">
+                <i class="left">
+
+                </i>
+                <span></span>
+                <input class="left" type="password" placeholder="请输入密码" name="" id="">
+            </p>
+            <p class="btn">
+                <input type="submit" value="登入">
+            </p>
+
+
+
+            <a href="">忘记密码?</a>
+
+        </div>
+        <div class="avc">
+
+            <img id="img" src="image/load.png" alt="">
+        </div>
+
+    </section>
+</body>
+
+</html>

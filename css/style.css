@@ -1,12 +1,21 @@
+section {
+    background-color: #68cdd5;
+}
+
 .content {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background-color: #68cdd5;
+}
+
+.content div {
+    padding-bottom: 10%;
 }
 
 .content .icon {
     width: 100%;
-    height: 8.3%;
+    /* height: 8.3%; */
+    height: 25%;
 }
 
 .content .icon a {
@@ -25,7 +34,8 @@
 
 .content .logo {
     width: 100%;
-    height: 22.2%;
+    /* height: 22.2%; */
+    height: 25%;
 }
 
 .content .logo h1 {
@@ -34,8 +44,13 @@
     /* width: 187px;
     height: 103px; */
     margin: 0 auto;
-    background: url('../image/logo.png') no-repeat center center;
+    /* background: url('../image/logo.png') no-repeat center center; */
     background-size: 18%;
+}
+
+.content .logo h1 img {
+    margin: 0 auto;
+    display: block;
 }
 
 
@@ -43,7 +58,8 @@
 
 .content .text {
     width: 100%;
-    height: 37%;
+    /* height: 37%; */
+    height: 25%;
     /* position: relative; */
 }
 
@@ -55,13 +71,15 @@
     height: 37%;
     margin: 0 auto;
     color: #fff;
-    line-height: 55px;
+    /* line-height: 20px; */
+    font-size: 2.5em;
     /* text-align: center; */
 }
 
 .content .user {
     width: 100%;
-    height: 33.4%;
+    /* height: 33.4%; */
+    height: 25%;
 }
 
 .content .user ul {
@@ -82,18 +100,25 @@
     width: 32%;
     height: 100%;
     margin: 0 auto;
-    text-align: center;
     background-size: 50%;
 }
 
+.content .user li a img {
+    margin: 0 auto;
+    display: block;
+}
+
 .user li .left {
-    background: url('../image/icon1.png') no-repeat center center;
+    /* background: url('../image/icon1.png') no-repeat center center; */
 }
 
 .user li .right {
-    background: url('../image/icon2.png') no-repeat center center;
+    /* background: url('../image/icon2.png') no-repeat center center; */
 }
 
 .user li span {
-    display: inline;
+    /* display: inline;*/
+    text-align: center;
+    display: block;
+    font-size: 2.5em;
 }

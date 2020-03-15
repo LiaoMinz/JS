@@ -1,0 +1,123 @@
+header {
+    width: 100%;
+    background-color: #5fc0cd;
+}
+
+.head {
+    width: 100%;
+    margin: 0 3%;
+}
+
+.head a {
+    display: block;
+    width: 26%;
+    padding-bottom: 0%;
+    float: left;
+    /* background-color: rgb(253, 187, 6); */
+    margin: 2.5%;
+    font-size: 3.5rem;
+    color: #fff;
+    line-height: 8.9rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.login {
+    position: relative;
+    width: 100%;
+}
+
+.login p {
+    width: 100%;
+    line-height: 8.9rem;
+    padding-bottom: 0%;
+}
+
+.login i {
+    float: left;
+    display: block;
+    background-color: #fff;
+    width: 9%;
+    margin-top: 2%;
+    height: 15rem;
+    background-image: url("../image/iphone.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20%;
+    /* border-left: 1px solid #eaedee; */
+}
+
+.login input {
+    float: left;
+    display: block;
+    width: 90%;
+    /* background-color: rgb(253, 187, 6); */
+    font-size: 3.5rem;
+    color: #000;
+    height: 15rem;
+    text-indent: 5.4rem;
+    margin-top: 2%;
+}
+
+.login span {
+    display: block;
+    position: absolute;
+    width: 1%;
+    height: 15rem;
+    background-image: url("../image/svl.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.user i {
+    background-image: url("../image/iphone.png");
+}
+
+.user span {
+    top: 25%;
+    left: 8%;
+}
+
+.password i {
+    background-image: url("../image/key.png");
+}
+
+.password span {
+    top: 75%;
+    left: 8%;
+}
+
+.btn input {
+    width: 100%;
+    margin-top: 5%;
+    background-color: #5fc0cd;
+    text-indent: 0;
+}
+
+.login a {
+    position: absolute;
+    bottom: -100%;
+    right: 5%;
+    margin-top: 2%;
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+    font-size: 3.5rem;
+    color: #5fc0cd;
+    vertical-align: text-bottom;
+}
+
+.avc img {
+    position: fixed;
+    display: none;
+    width: 26%;
+    height: 10%;
+    top: 68%;
+    left: 38%;
+}
