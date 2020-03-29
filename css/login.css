@@ -43,6 +43,7 @@ header {
     width: 100%;
     line-height: 5.9rem;
     padding-bottom: 0%;
+    padding: 0 0;
 }
 
 .login i {
@@ -52,12 +53,18 @@ header {
     width: 9%;
     margin-top: 2%;
     height: 5.9rem;
+    border-right: 1px solid #eaedee;
+}
+
+.login i span {
+    width: 90%;
+    height: 5.9rem;
+    display: block;
     background-image: url("../image/iphone.png");
     background-repeat: no-repeat;
     background-position: center center;
-    /* background-size: 35%; */
-    /* border-left: 1px solid #eaedee; */
-    border-right: 1px solid #eaedee;
+    background-size: auto auto;
+    /* background-color: blue; */
 }
 
 .login input {
@@ -73,18 +80,7 @@ header {
     outline: none;
 }
 
-
-/* .login span {
-    display: block;
-    position: absolute;
-    width: 1%;
-    height: 5.9rem;
-    background-image: url("../image/svl.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-} */
-
-.user i {
+.user i span {
     background-image: url("../image/iphone.png");
 }
 
@@ -94,7 +90,7 @@ header {
     left: 10%;
 } */
 
-.password i {
+.password i span {
     background-image: url("../image/key.png");
 }
 
@@ -103,6 +99,10 @@ header {
     top: 26%;
     left: 10%;
 } */
+
+.btn {
+    padding: 0 0 !important;
+}
 
 .btn .submit {
     width: 100%;
