@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>isNaN应用实例</title>
+    <script>
+        var a = Number('abc');
+        //alert(a);//NaN
+
+        //NaN : nat a number 不是个数字的数字类型
+
+        // alert(typeof NaN); //Number
+        // 一旦写程序 出现 NaN 肯定进行了非法的运算操作;
+        //alert('200px' - 100);
+        // NaN 是 假
+        if (a) {
+            //    alert('真');
+        } else {
+            //    alert('假');
+        }
+        var abc = '';// 所有数据类型 和自己做比较都是相等的 NaN 除外
+        // alert(abc === abc);true
+        //alert(a === a); false
+        //NaN 和自己都不相等 ！！
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //NaN : nat a number 不是个数字的数字类型
+        //isNaN : is  nat a number  是不是不是一个数字 (不是数字)
+        // isNaN(); //true flase
+        //可以判断某值是不是数字类型
+        //不喜欢数字    讨厌数字；
+        //isNaN(2);false
+        //isNaN(250) false
+        //alert(isNaN(function(){alert(1)}));
+        //alert(isNaN('250'));
+        // isNaN() 是通过先让Naumber() 转换 如果能转成功为数字 就取反 如果转不成功 就不取反
+        // Number() '250' =>250 =>false
+        //alert(isNaN([]));false
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+
+        window.onload = function () {
+
+            var aInp = document.getElementsByTagName('input');
+
+            aInp[1].onclick = function () {
+//              HTML 中拿到的内容  类型都是字符串
+                if (isNaN( aInp[0].value)) {
+                    alert( aInp[0].value + '不是数字');
+                } else {
+                    alert( aInp[0].value + '是数字');
+                }
+            };
+
+        };
+
+    </script>
+</head>
+
+<body>
+    <input type="text">
+    <input type="button" value="判断输入值是不是数字">
+</body>
+
+</html>

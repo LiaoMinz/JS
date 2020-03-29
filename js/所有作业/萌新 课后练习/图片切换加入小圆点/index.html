@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>带缩略图的图片切换</title>
+    <script>
+        window.onload = function() {
+            var arrImg = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg']
+            var oImg = document.getElementById('img');
+            var oLeft = document.getElementById('left');
+            var oRight = document.getElementById('right');
+            var oCenter = document.getElementById('center');
+            var aDiv = oCenter.getElementsByTagName('div');
+            var oCenter1 = document.getElementById('center1')
+            var aDot = document.getElementsByTagName('span');
+            var num = 0;
+            var len = arrImg.length;
+            oRight.onclick = function() {
+                num++;
+                if (num === len) {
+                    num = 0;
+                }
+                oImg.src = arrImg[num];
+                tab();
+            };
+
+            function tab() {
+                for (var i = 0; i < aDot.length; i++) {
+                    aDot[i].className = '';
+                }
+                aDot[num].className = 'active';
+            };
+            oLeft.onclick = function() {
+                num--;
+                if (num === -1) {
+                    num = len - 1;
+                }
+                oImg.src = arrImg[num];
+                tab();
+            }
+            for (var i = 0; i < aDot.length; i++) {
+                aDot[i].index = i;
+                aDot[i].onclick = function() {
+                    num = this.index
+                    for (var i = 0; i < aDot.length; i++) {
+                        aDot[i].className = '';
+                    };
+                    this.className = 'active';
+                    oImg.src = arrImg[num];
+                };
+                aDot[i].onmouseover = function() {
+                    num = this.index
+                        // this.className = 'active';
+                        // tab();
+                    aDiv[num].className = 'show';
+                };
+                aDot[i].onmouseout = function() {
+                    num = this.index;
+                    // this.className = '';
+                    aDiv[num].className = '';
+                };
+
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="rpm">
+        <div id="wrap">
+            <img id="img" src="img/1.jpg" alt="">
+            <div class="tab">
+                <a href="javascript:;" id="left">
+                    <</a>
+                        <a href="javascript:;" id="right">></a>
+            </div>
+            <ul id="dot">
+                <li class="box">
+                    <div class="center" id="center">
+                        <div class="wp">
+                            <img src="img/1.jpg" alt="">
+                        </div>
+                        <div class="wp">
+                            <img src="img/2.jpg" alt="">
+                        </div>
+                        <div class="wp">
+                            <img src="img/3.jpg" alt="">
+                        </div>
+                        <div class="wp">
+                            <img src="img/4.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="dotfour">
+                    <div class="center" id="center1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

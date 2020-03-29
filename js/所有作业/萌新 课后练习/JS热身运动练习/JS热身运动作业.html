@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>热身运动</title>
+    <style>
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #click {
+            width: 80px;
+            height: 25px;
+            border: none;
+            background-color: red;
+            outline: none;
+            margin-left: 30px;
+        }
+
+        #Change {
+            width: 98px;
+            height: 98px;
+            background-color: skyblue;
+            margin: 100px 50px;
+            border: 2px solid #333;
+            transition: 1s;
+        }
+
+        #box {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            width: 400px;
+            height: 300px;
+            background-color: rgba(0, 0, 0, .3);
+
+        }
+
+        #box1 {
+            width: 300px;
+            background-color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 55px;
+        }
+
+        #box p {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px 10px;
+            /* background-color: #000; */
+            line-height: 25px;
+
+        }
+
+        #red,
+        #yellow,
+        #blue,
+        .equally,
+        #Determine,
+        #recovery {
+            display: inline-block;
+            width: 40px;
+            height: 25px;
+            text-align: center;
+
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        .equally {
+            background-color: #ccc;
+        }
+        #Determine, #recovery{
+            background-color: skyblue;
+            margin-left: 65px;
+
+        }
+        #Determine{
+
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oBtn = document.getElementById('click');
+            var oChange = document.getElementById('Change');
+            var oBox = document.getElementById('box');
+            var oRed = document.getElementById('red');
+            var oYellow = document.getElementById('yellow');
+            var oBlue = document.getElementById('blue');
+            var owid2 = document.getElementById('wid2');
+            var owid3 = document.getElementById('wid3');
+            var owid4 = document.getElementById('wid4');
+            var ohei2 = document.getElementById('hei2');
+            var ohei3 = document.getElementById('hei3');
+            var ohei4 = document.getElementById('hei4');
+            var Determine = document.getElementById('Determine');
+            var recovery = document.getElementById('recovery');
+
+            oBtn.onclick = function(){
+                oBox.style.display = 'block';
+            };
+            oRed.onclick = function(){
+                oChange.style.backgroundColor = 'red';
+            };
+            oYellow.onclick = function(){
+                oChange.style.backgroundColor = 'yellow';
+            };
+            oBlue.onclick = function(){
+                oChange.style.backgroundColor = 'blue';
+            };
+            owid2.onclick = function(){
+                oChange.style.width = '200px';
+            };
+            owid3.onclick = function(){
+                oChange.style.width = '300px';
+            };
+            owid4.onclick = function(){
+                oChange.style.width = '400px';
+            };
+            ohei2.onclick = function(){
+                oChange.style.height = '200px';
+            };
+            ohei3.onclick = function(){
+                oChange.style.height = '300px';
+            };
+            ohei4.onclick = function(){
+                oChange.style.height = '400px';
+            };
+            Determine.onclick = function (){
+                oBox.style.display = 'none'; 
+            };
+            recovery.onclick = function (){
+                oChange.style.width = '98px'; 
+                oChange.style.height = '98px'; 
+                oChange.style.backgroundColor = 'skyblue';
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <p>请为下面的div设置样式<input id="click" type="button" value="点击设置"></p>
+    <div id="Change"></div>
+    <div id="box" style="display:none;">
+        <div id="box1">
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">请选择颜色：
+                </font>
+                </font>
+                <a id="red" href="javascript:;">红</a>
+                <a id="yellow" href="javascript:;">黄</a>
+                <a id="blue" href="javascript:;">蓝</a>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">请选择宽度：
+                </font>
+                </font>
+                <a class="equally" id="wid2" href="javascript:;">200</a>
+                <a class="equally" id="wid3" href="javascript:;">300</a>
+                <a class="equally" id="wid4" href="javascript:;">400</a>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">请选择高度：
+                </font>
+                </font>
+                <a class="equally" id="hei2" href="javascript:;">200</a>
+                <a class="equally" id="hei3" href="javascript:;">300</a>
+                <a class="equally" id="hei4" href="javascript:;">400</a>
+            </p>
+            <p>
+                <a id="Determine" href="javascript:;">
+                    确定
+                </a>
+                <a id="recovery" href="javascript:;">
+                    恢复
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

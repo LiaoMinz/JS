@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模拟JQ获取元素</title>
+    <style>
+        div {
+            width: 100px;
+            height: 0px;
+            background-color: red;
+            transition: 1s;
+
+        }
+    </style>
+    <script src="liaomin.js"></script>
+    <script>
+        // window.onload = function(){
+        //    // var oBtn = document.getElementById('btn');
+        //     //var oDiv = document.getElementById('div');
+        //     $('btn').onclick = function(){
+        //         $('div').style.backgroundColor = 'blue';
+        //         $('div').style.width = '300px';
+        //     }
+
+        //     function $(id){
+        //         return document.getElementById(id);
+        //     }
+        // };
+        $(function () {
+            $('btn').onclick = function () {
+                $('div').style.height = '300px';
+            };
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <input id="btn" type="button" value="按钮">
+    <div id="div"></div>
+</body>
+
+</html>

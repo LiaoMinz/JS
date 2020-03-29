@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义开关</title>
+    <script>
+        /*
+    HTML标签属性...
+    自定义属性.....
+    */
+        window.onload = function () {
+            //var aBtn = document.getElementsByTagName('input');
+
+            // aBtn[0].abc = 123; //自定义属性;
+            //for(var i = 0; i < aBtn.leng; i++){
+            //aBtn[i].onoff = true;
+
+            // }
+            //  console.log(aBtn[i].onoff);
+        var oUl = document.getElementById('click');
+            console.log(oUl);
+            
+          var aLi = oUl.getElementsByTagName('li');
+            console.log(aLi);
+            for(var i = 0; i < aLi.length; i++){
+              aLi[i].onoff = true;
+                // alert(aLi[i].onoff);
+             aLi[i].onclick = function () {
+                //  alert(1);
+                if(this.onoff){
+                    this.className = 'active';
+                    // this.onoff = false;
+                }else{
+                    this.className = '';
+                    //  this.onoff = true;
+                }
+               this.onoff = !this.onoff;
+             };
+
+            };
+        };
+    </script>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            width: 104px;
+            height: 168px;
+            float: left;
+            margin-left: 10px;
+            background: url('img/002.png');
+        }
+        .active{
+            background: url('img/108.png');
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <input type="button" value="">
+    <input type="button" value="">
+    <input type="button" value=""> -->
+    <ul id="click">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

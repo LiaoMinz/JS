@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arguments实参集合</title>
+</head>
+
+<body>
+    <script>
+        fn1(1, 2, 3);  //实参 -- 实际传递的参数
+        function fn1(a, b, c) { //形参 -- 形式上abc这些名字 代表123
+            //arguments => [] 实参的集合
+            //alert(arguments);
+            //alert(arguments.length);
+            alert(arguments[arguments.length - 1]);
+        }
+        //当函数的参数无法确定是用arguments
+        alert(sum(1, 2, 3)) //6
+        alert(sum(10, 2, 3, 4)) // 1
+
+        function sum() {
+            var n = 0;
+            var len = arguments.length;
+            for (var i = 0; i < len; i++) {
+                n += arguments[i];
+
+            }
+            return n;
+        }
+        //课后小练习
+        //alert(sum(1, 2, 3, 4,'+')) 相加  
+        // alert(sum(10, 2, 3, 4, 5, 6,'-')) 相减
+
+        //arguments 与作用域关系
+
+        var a = 1;
+        function fn3(a) {
+            arguments[0] = 4;
+            alert(a); // underfined  1 4
+            var a = 2;
+            alert(arguments[0]); 2
+        }
+        fn3(a);
+        alert(a); //1 1  1
+    </script>
+</body>
+
+</html>

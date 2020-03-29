@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>包含选择器 通配符*</title>
+    <style>
+        .box div {
+            /* 包含选择器 匹配所有父元素下一级的子元素 加权值 10+1=11 */
+
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        * {
+            /* 通配符 选择器  匹配所有标签  加权值为 0 通常只用在做一些小练习 */
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div></div>
+    </div>
+
+    <span>样式区分</span>
+
+    <h1>this is a title</h1>
+    <h2>this is a title</h2>
+    <h3>this is a title</h3>
+    <h4>this is a title</h4>
+    <h5>this is a title</h5>
+    <h6>this is a title</h6>
+
+</body>
+
+</html>

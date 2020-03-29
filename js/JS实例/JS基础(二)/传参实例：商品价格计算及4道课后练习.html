@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>传参实例：商品价格计算及4道课后练习</title>
+    <script>
+        /*
+ 
+    重用代码:
+    1 尽量保证 HTML代码结构一致，可以通过父级选取子元素
+    2 把核心主程序实现 用函数包起来 ，
+    3 把每组里不同的值找出来  通过传参实现；
+*/
+        window.onload = function () {
+
+            var oUl = document.getElementById('list');
+            var aLi = oUl.getElementsByTagName('li');
+            for (var i = 0; i < aLi.length; i++) {
+                fn1(aLi[i]);
+            };
+            function fn1(oLi) {
+                var aInp = oLi.getElementsByTagName('input');
+                var oStrong = oLi.getElementsByTagName('strong')[0];
+                var oEm = oLi.getElementsByTagName('em')[0];
+                var oSpan = oLi.getElementsByTagName('span')[0];
+                var oI =  oLi.getElementsByTagName('i')[0];
+                var oA=  oLi.getElementsByTagName('a')[0];
+                var oP=  oLi.getElementsByTagName('p')[0];
+                var num1 = Number(oStrong.innerHTML);// 字符串 ‘0’ 需要转换 成数字
+                var num2 = parseFloat(oEm.innerHTML);//与上同理
+                // console.log(aInp);
+                aInp[0].onclick = function () {
+                    num1--;
+                    if (num1 < 0) {
+                        num1 = 0;
+                        alert('已清空为0无法继续')
+                    };
+                    oStrong.innerHTML = num1;
+                    oSpan.innerHTML = num1 * num2 + '元';
+
+                };
+                aInp[1].onclick = function () {
+
+                    num1++;
+                    oStrong.innerHTML = num1;
+                    oSpan.innerHTML = num1 * num2 + '元';
+                    oI.innerHTML = num1;
+                };
+
+            };
+        };
+    </script>
+    <style>
+        *{
+            display: inner-block;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <ul id="list">
+        <li>
+            <input type="button" value="-">
+            <strong>0</strong>
+            <input type="button" value="+">
+            单价: <em>12.5元</em>
+            小计: <span>0元</span>
+        </li>
+        <li>
+            <input type="button" value="-">
+            <strong>0</strong>
+            <input type="button" value="+">
+            单价: <em>8.5元</em>
+            小计: <span>0</span>
+        </li>
+        <li>
+            <input type="button" value="-">
+            <strong>0</strong>
+            <input type="button" value="+">
+            单价: <em>9.5元</em>
+            小计: <span>0</span>
+        </li>
+        <li>
+            <input type="button" value="-">
+            <strong>0</strong>
+            <input type="button" value="+">
+            单价: <em>10.5元</em>
+            小计: <span>0</span>
+        </li>
+        <li>
+            <input type="button" value="-">
+            <strong>0</strong>
+            <input type="button" value="+">
+            单价: <em>55.5元</em>
+            小计: <span>0</span>
+        </li>
+        <li>
+            <input type="button" value="-">
+            <strong>0</strong>
+            <input type="button" value="+">
+            单价: <em>77.5元</em>
+            小计: <span>0</span>
+        </li>
+    </ul>
+    <div id="hj">
+        商品合计：<i>0件</i>
+        共花费了：<p>0元</p>
+        其中最贵的商品单价<a href="">0元</a>
+
+</div>
+
+
+    
+</body>
+
+</html>

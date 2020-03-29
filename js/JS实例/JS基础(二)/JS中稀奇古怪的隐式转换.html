@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS中稀奇古怪的隐式转换</title>
+    <script>
+     //   显式类型转换 (强制类型转换)
+        // number()
+        // parseInt()
+        // parseFloat()
+
+       // 隐式类型转换
+       // +  200 + '3'  进行拼接  任何东西与字符串相加都是进行拼接
+       // - * / %  '200'-3   隐式转换   转为数字 197
+       // ++  转换为数字 200
+       // --  转换为数字 200
+       // > <  两个 字符串作比较 是比较unicode 编码
+       // ! 取反把符号右边转成布尔值 true flase  逻辑非  逻辑运算符  &&与  ||或  
+       // ==  !==  
+       // var c = '200';
+       //window.alert('10000000000000' > '9');true
+       //alert(2 == '2'); true 
+       //alert(2 === '2'); false
+       //alert(Number('......'));NaN
+       //alert('.....'-9);NaN
+    //当无法转换就会转成NaN
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

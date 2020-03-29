@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <script>
+        window.onload = function () {
+            ;
+
+            var li = document.getElementById('rain');
+
+            var ul = document.getElementById('ul1');
+
+            var a = document.getElementById('link');
+
+            li.onmouseover = show; //onmouseover 鼠标移入事件；
+
+            li.onmouseout = hide; //nmouseout 鼠标移开事件；
+
+            function show() { // ok不会自动执行 需要鼠标移入：
+                li.style.background = '#ccc'
+                ul.style.display = 'block';
+                a.style.color = 'blue';
+            }
+
+            function hide() { // ok不会自动执行 需要鼠标移入：
+                li.style.background = '#333'
+                ul.style.display = 'none';
+                a.style.color = 'red';
+            }
+        }
+        /*
+                       js中如何获取元素；
+                           1.通过ID名称
+                               document get element by id '元素id'
+                               document.getElementByID();
+                           2.
+           
+               事件： 鼠标事件，点击事件，键盘事件， 系统事件，表单事件，自定义事件；
+                       onclick 点击事件，
+                       onmouseover 鼠标移入事件，
+                       onmouseout 鼠标移开事件，
+                       onmousemove 鼠标的抚摸事件；
+                       ......
+                       onload    加载完以后在执行；系统事件；
+                       window.onload = 事件
+                       img.onload
+                       body.onload
+                       .......
+                   如何添加事件：
+                       元素.onmouseover
+           
+                   函数：可以理解为-命令；做一些事。。。
+                       function abc(){  任何代码在函数里 都不会自动执行的：
+                           .....
+                       }
+                       1.直接调用：abc();
+                       2.事件调用：元素.事件 = 函数 oDiv.onclick = abc;
+                       3.function (){} 匿名函数
+                        元素.事件 = function (){}; 匿名函数；
+                       4
+                   测试alert(1);  带一个确定按钮的警告框;
+                        alert('ok');    'ok' 字符串;
+                        alert("ok");
+                   变量
+                       var li = li = document.getElementById('rain');
+*/
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .xiala {
+            position: relative;
+            top: 200px;
+            left: 45%;
+            width: 80px;
+            height: 30px;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 30px;
+            background-color: #333;
+            color: #333;
+        }
+
+        .xiala ul {
+            /* display: none; */
+            position: absolute;
+            top: 30px;
+            left: -1px;
+            width: 80px;
+            /* height: 90px; */
+            border: 1px solid red;
+            text-align: center;
+            line-height: 30px;
+            transition: 1s;
+
+        }
+    </style>
+    <script>
+        function abc() {
+            var li = document.getElementById('rain');
+
+            var ul = document.getElementById('ul1');
+
+            var a = document.getElementById('link');
+
+            li.onmouseover = show;
+
+            li.onmouseout = hide;
+
+            function show() { // ok不会自动执行 需要鼠标移入：
+                li.style.background = '#ccc'
+                ul.style.height = '90px';
+                a.style.color = 'blue';
+            }
+
+            function hide() { // ok不会自动执行 需要鼠标移入：
+                li.style.background = '#333'
+                ul.style.height = '0';
+                a.style.color = 'red';
+            }
+        }
+        /*
+                    js中如何获取元素；
+                        1.通过ID名称
+                            document get element by id '元素id'
+                            document.getElementByID();
+                        2.
+    
+            事件： 鼠标事件，点击事件，键盘事件， 系统事件，表单事件，自定义事件；
+                    onclick 点击事件，
+                    onmouseover 鼠标移入事件，
+                    onmouseout 鼠标移开事件，
+                    onmousemove 鼠标的抚摸事件；
+                    ......
+                    onload    加载完以后在执行；系统事件；
+                    window.onload = 事件
+                    img.onload
+                    body.onload
+                    .......
+                如何添加事件：
+                    元素.onmouseover
+    
+                函数：可以理解为-命令；做一些事。。。
+                    function abc(){  任何代码在函数里 都不会自动执行的：
+                        .....
+                    }
+                    1.直接调用：abc();
+                    2.事件条用：元素.事件 = 函数 oDiv.onclick = abc;
+                    3.
+                    4
+                测试alert(1);  带一个确定按钮的警告框;
+                     alert('ok');    'ok' 字符串;
+                     alert("ok");
+                变量
+                    var li = li = document.getElementById('rain');
+                */
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li class="xiala" id="rain">
+            <a href="" id="link">微博</a>
+            <ul id="ul1">
+                <script>
+                    var li = document.getElementById('rain');
+                    var ul = document.getElementById('ul1');
+                    var a = document.getElementById('link');
+                    li.onmouseover = show;
+                    li.onmouseout = hide;
+
+                    function show() { // ok不会自动执行 需要鼠标移入：
+                        li.style.background = '#ccc'
+                        ul.style.height = '240px';
+                        a.style.color = 'blue';
+                    }
+
+                    function hide() { // ok不会自动执行 需要鼠标移入：
+                        li.style.background = '#333'
+                        ul.style.height = '0';
+                        a.style.color = 'red';
+                    }
+                    /*
+                                js中如何获取元素；
+                                    1.通过ID名称
+                                        document get element by id '元素id'
+                                        document.getElementByID();
+                                    2.
+
+                        事件： 鼠标事件，点击事件，键盘事件， 系统事件，表单事件，自定义事件；
+                                onclick 点击事件，
+                                onmouseover 鼠标移入事件，
+                                onmouseout 鼠标移开事件，
+                                onmousemove 鼠标的抚摸事件；
+                            如何添加事件：
+                                元素.onmouseover
+
+                            函数：可以理解为-命令；做一些事。。。
+                                function abc(){  任何代码在函数里 都不会自动执行的：
+                                    .....
+                                }
+                                1.直接调用：abc();
+                                2.事件条用：元素.事件 = 函数 oDiv.onclick = abc;
+                                3.
+                                4
+                            测试alert(1);  带一个确定按钮的警告框;
+                                 alert('ok');    'ok' 字符串;
+                                 alert("ok");
+                            变量
+                                var li = li = document.getElementById('rain');
+                            */
+                </script>
+                <li>私信</li>
+                <li>品论</li>
+                <li>@我</li>
+                <li>@我</li>
+                <li>@我</li>
+                <li>@我</li>
+                <li>@我</li>
+                <li>@我</li>
+            </ul>
+        </li>
+    </ul>
+    <!--
+        希望把某个元素移除你的视线；
+            1.display:none;
+            2.visibility：hidden;
+            3.width/height
+            4.透明度
+            5.left/top
+            6.拿一个白色的div盖住；
+            7.margin负值
+
+
+
+    -->
+
+    <script>
+        abc();
+    </script>
+</body>
+
+</html>

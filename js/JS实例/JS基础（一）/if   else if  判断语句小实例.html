@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if else if 判断语句小实例</title>
+    <script>
+        window.onload = function (){
+
+            var oText = document.getElementById('text1');
+
+            var oBtn = document.getElementById('btn1');
+
+            oBtn.onclick = function (){
+                if(oText.value == ''){
+                    alert('请输入内容');
+                }else if(oText.value == 'CSS'){
+
+                    alert('你输入的是' + oText.value + '恭喜,通过验证');
+
+                }else if(oText.value == 'HTML'){
+
+                    alert('你输入的是' + oText.value + '恭喜,通过验证');
+
+                }else if(oText.value == 'JS'){
+
+                    alert('你输入的是' + oText.value + '恭喜,通过验证');
+                    
+                }else{
+                    alert('你输入的内容错误' + oText.value + '内容错误请重新输入');
+                }
+            };
+
+        };
+    
+    </script>
+</head>
+
+<body>
+    进群需验证:
+    <input id="text1" type="text">
+    <input id="btn1" type="button" value="提交">
+</body>
+
+</html>

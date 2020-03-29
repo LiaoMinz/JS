@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>parseInt与parseFloat的区别及小技巧</title>
+    <script>
+        var b = '-100px';
+        //alert(Number(b));NaN
+        //alert(parseInt(b));
+        //parseInt 整形 只能转换整数，不能转换小数，从左往右一个一个的看遇到不为数字了就停止转换;
+       // + - 空格 0 符号在前面可以转 
+       //* / % 不能转  为NaN 
+       var c = '12.34万元';
+     //  alert(parseInt(c));只能转换整数 遇到小数就不能转了;
+     //alert(parseFloat(c));
+     // parseFloat（）浮点型  能转小数 当一个数出现多个点时无法转换
+
+     var num = '222.21';
+     if(parseInt(num) == parseFloat(num)){
+        // 判断这个数是否为整数 或小数 可以用parseInt(num) == parseFloat(num)判断
+        alert(num + '为整数');
+     }else{
+        alert(num + '为小数');
+     }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 10px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 盒模型
+        盒子大小： = border + padding + width/height
+       
+        盒子宽度： = 左border + 左padding + width + 右padding + 右border
+        宽度:100 + 20 + 40 = 160
+        盒子高度： = 上border + 上padding + height +下padding + 下border； -->
+        高度度:100 + 20 + 40 = 160
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常用的css选择器</title>
+    <style>
+        #box {
+            /*以(#)开头 匹配所有id名字的元素,  ID名唯一性 每个ID名字只能在页面出现一次, 加权值100
+            
+            
+            */
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        .box1 {
+            /* 以(.)开头 为class选择器 匹配所class名称的元素 可以有多个class名字相同的名字 称为类，加权值 10； */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px 0;
+        }
+
+        span {
+            /* 行内元素 无法添加宽高 需要转换成 块元素  或者行内块元素 由内容撑开宽高。。不会独占一行  
+            标签选择器  加权值为 1； */
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        h1,h2,h3,h4,h5,h6{
+            /* 群组标签选择器 用逗号（,）来隔开 可以使用多个标签来使用同一种样式, 可以用于CSS reset 样式初始化 */
+            height: 50px;
+            background-color: green;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+
+    <span>样式区分</span>
+
+    <h1>this is a title</h1>
+    <h2>this is a title</h2>
+    <h3>this is a title</h3>
+    <h4>this is a title</h4>
+    <h5>this is a title</h5>
+    <h6>this is a title</h6>
+
+
+</body>
+
+</html>

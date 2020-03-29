@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>综合实例：生成一组新闻及思路解析</title>
+    <script>
+        window.onload = function(){
+        var arr =  ['1.解读来了!央行降准释放1.5万亿,对股市、楼市影响如何?','2.应急管理部：危化品重点县安排专家指导','3.玉兔二号巡视器继续月背行走,嫦娥四号部分有效载荷开机工作','4.国办：全面推行执法全过程记录，查封、强拆要全程音像','5.税务总局:涉税专业服务机构不得借个税改革之机乱收费'];
+
+        var oBtn = document.getElementById('btn1');
+
+        var oUl = document.getElementById('list');
+        var onoff = true;
+        oBtn.onclick = function(){
+
+        // oBtn.disabled = true; 让按钮的属性变成true不能再点击了；
+        //
+        //oBtn.style.display = 'none'; 点击一次后让按钮隐藏；
+
+        // oUl.innerHTML = '';
+        //
+
+        // 思路：
+        // 1.找按钮麻烦（用用户体验很差）
+        // 2.先清空 在生成5条；
+        //3.判断语句
+
+        if(onoff){
+
+                for (var i = 0; i < arr.length;i ++){ 
+                    oUl.innerHTML +='<li>' +arr[i]+'</li>';   
+                };
+            
+            }; 
+            onoff=false; 
+        }; 
+    };
+
+</script>
+</head>
+
+<body>
+    <input id="btn1" type="button" value="自动生成5条新闻">
+    <ul id="list"></ul>
+</body>
+
+</html>

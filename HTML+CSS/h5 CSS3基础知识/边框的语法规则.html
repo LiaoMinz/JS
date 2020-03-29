@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            float: left;  
+            margin-left: 30px;
+        }
+
+        #div1 {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+                  /*宽度  实线  红色 */
+            border-top: 10px dashed blue; 
+            /*设置边框某个方向的样式  复合样式  */
+            border-top-color:pink; 
+            /* 设置边框某个方向的单一样式 */
+        }
+        .div2{
+            width: 0px;
+            height: 0px;
+            /* 去除宽度和高度查看边框的形状 */
+            border:30px solid red;
+            border-left-color: blue;
+            /* 改变某一条变得颜色来测验边框的形状 */
+        }
+        .div3{
+            width:0;
+            height:0;
+            border:10px solid #fff;
+            /* border-top-color: springgreen; */
+             /* 使用边框特性 做下拉菜单 三角形 */
+             border-left-color:slateblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- border 边框 
+        border-width: 边框宽度
+        border-style: 边框样式
+        border-color: 边框颜色
+
+                边框样式：
+                    
+                    solid :实线
+                    dashed ：虚线
+                    dotted ：点线 （IE6不兼容）
+        边框方向：
+            top right bottom left
+                设置边框某个方向的样式
+                    border-top    上边框
+                    border-right  右边框
+                    border-bottom  下边框
+                    border-left    左边框
+        边框的形状 ：非矩形；
+    -->
+    <div id="div1"> </div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+
+
+</body>
+
+</html>

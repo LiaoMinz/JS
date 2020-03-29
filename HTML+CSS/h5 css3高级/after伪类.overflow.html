@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>after伪类 overflow</title>
+    <style>
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            border: 1px solid red;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="item"></div>
+    </div>
+    <!-- BFC特性（块级元素格式化上下文） 标准浏览器
+        float值 不为none;
+        overflow值不为 visible overflow 溢出值有 hidden | auto | sroll
+                                                 隐藏       滚动条
+        display的值不为table-cell table-caption inline-block中的任意一个 
+        position的值不为relative和static
+        width height min-width min-height （！auto）
+
+        hhlayout  IE浏览器
+            witing-mode:tb-rl;
+            -ms-witing-mode:tb-rl;
+            zoom:(lnormal)
+    
+    -->
+</body>
+
+</html>

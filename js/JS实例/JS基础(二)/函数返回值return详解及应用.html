@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数返回值return详解及应用</title>
+</head>
+<body>
+    <script>
+        //return 函数返回值
+        // 数字 字符串 对象（null 数组 json 元素）  underfined 都可以返回值 
+
+
+
+        //fn1(); => 100 函数名称加括号 => return 后面返回的值
+        //console.log(fn1());打印
+        console.log(fn1().length);//访问字符串长度
+        function fn1(){
+            //return 200; //调用此函数返回值 200
+            return 'liaomin';
+        }
+        
+        //函数 
+        //return 后面返回一个函数时 不是调用函数 直接返回这个函数块的所有代码
+        //console.log(fn2());
+        fn2(20)(10);
+        function fn2(a){
+            return function(b){
+               console.log(a + b);//嘿嘿 注释
+            }
+        }
+
+
+        fn3().onload = function(){
+            document.body.innerHTML = 123;
+        }
+        function fn3(){
+            return window;
+        }
+        console.log(fn4(5));
+        console.log(fn4(7));
+        function fn4(m){
+            var array = [];
+            for(var i=1; i<= m; i++){
+                array.push(i);
+            };
+            return array;
+        };
+        //小练习 取两个数字的区之间
+        // console.log(fn4(2,5));
+        // console.log(fn4(7,2));
+        // function fn5(n,t){
+        //     var arr = [];
+        //     for(var i=2,h=5; i<=t; i++){
+        //             arr.push(i)
+        //     }
+        //     if(n == 2){
+        //         return arr;
+        //     }
+        // }
+        //未定义
+        console.log(fn5());
+        function fn5(){
+            //return 默认 返回值为 underfined
+        }
+        console.log(fn6());
+        function fn6(){
+            return 123; //return 下面的代码都不会在执行；
+            alert(520);
+        }
+
+        /*
+            return 返回值
+                1）函数名称 + 括号 fn1() ==> return 后面返回的值
+                2）所有函数 默认return 返回值为 underfined 未定义
+                3）return 后面的代码都不在执行
+        
+        */
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    		<title>图片切换综合实例</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #333;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 700px;
+            height: 560px;
+            position: relative;
+            float: left;
+            margin-right: 50px;
+        }
+
+        .box img {
+            width: 700px;
+            height: 560px;
+            display: block;
+        }
+
+        .box ul {
+            width: 20px;
+            position: absolute;
+            top: 0;
+            right: -40px;
+        }
+
+        .box li {
+            width: 20px;
+            height: 20px;
+			border-radius:5px;
+            margin-bottom: 10px;
+            background-color: #666;
+        }
+
+        .box .active {
+            background-color: #fc3;
+        }
+
+        .box span {
+            top: 0;
+        }
+
+        .box p {
+            margin: 0;
+            bottom: 0;
+        }
+
+        .box span,
+        .box p {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            background-color: rgba(0, 0, 0, .5);
+        }
+    </style>
+    <script>
+        /*
+        
+            重用代码:
+            1 尽量保证 HTML代码结构一致，可以通过父级选取子元素
+            2 把核心主程序实现 用函数包起来 ，
+            3 把每组里不同的值找出来  通过传参实现；
+
+
+        */
+        window.onload = function(){
+            Tab('pic1',['../img/1.jpg', '../img/2.jpg', '../img/3.jpg', '../img/4.jpg'],['小米8', '小米电视', '小米摄像头', '小米笔记本'],'onclick');
+            Tab('pic2',['img1/belle.jpg','img1/flower.jpg','img1/rouse.jpg'],[ '小米电视', '小米摄像头', '小米笔记本'], 'onmousemove');
+        };
+        function Tab(id,arrImg,arrP,evt) {
+            var oDiv = document.getElementById(id);
+            var oImg = oDiv.getElementsByTagName('img')[0];
+            var oP = oDiv.getElementsByTagName('p')[0];
+            var oSpan = oDiv.getElementsByTagName('span')[0];
+            var oUl = oDiv.getElementsByTagName('ul')[0];
+            var aLi = oUl.getElementsByTagName('li');
+            var num = 0;
+            var oldLi = null;
+
+
+            for (var i = 0; i < arrP.length; i++) {
+                oUl.innerHTML += '<li></li>';
+            };
+            oldLi = aLi[num];
+            //初始化
+            function fnTab() {
+                oImg.src = arrImg[num];
+                oP.innerHTML = arrP[num];
+                oSpan.innerHTML = num + 1 + '/' + arrImg.length;
+                for (var i = 0; i < aLi.length; i++) {
+                    aLi[i].className = '';
+                };
+                aLi[num].className = 'active';
+            };
+            fnTab();
+
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].index = i;
+                aLi[i][evt] = function () {
+                    num = this.index;
+                    fnTab();
+                    /*alert(this.index);
+                    oImg.src = arrImg[num];
+                    oP.innerHTML = arrP[num];
+                    oSpan.innerHTML = num + 1 + '/' + arrImg.length;
+                    /* 两种思路 :
+                    思路一
+                    全部清空 当前添加
+                    for (var i = 0; i < aLi.length; i++) {
+                        aLi[i].className = '';
+                    };
+
+                     this.className = 'active';
+                    aLi[num].className = 'active';*/
+                    /* 思路二:
+                    清空上一个 当前添加
+                   
+                  oldLi.className = '';
+
+                    oldLi = this;
+
+                   this.className = 'active'; */
+                };
+
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <div id="pic1" class="box">
+        <img src="" alt="">
+        <span>数量加载中...</span>
+        <p>文字说明正在加载中...</p>
+        <ul>
+            <!-- <li></li>
+            <li></li>
+            <li></li>
+            <li></li> -->
+        </ul>
+
+    </div>
+    <div id="pic2" class="box">
+            <img src="" alt="">
+            <span>数量加载中...</span>
+            <p>文字说明正在加载中...</p>
+            <ul>
+                <!-- <li></li>
+                <li></li>
+                <li></li>
+                <li></li> -->
+            </ul>
+    
+        </div>
+</body>
+
+</html>

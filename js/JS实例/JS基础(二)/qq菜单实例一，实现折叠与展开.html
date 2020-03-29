@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>qq菜单实例，折叠与展开</title>
+	<style>
+		body {
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		}
+
+		ul,
+		h4 {
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		#list {
+			width: 240px;
+			margin: 0 auto;
+		}
+
+		#list .lis {
+			width: 100%;
+			background-color: skyblue;
+			border: 1px solid #000;
+			line-height: 40px;
+		}
+
+		#list h4 {
+			height: 48px;
+			background: url(../img/ico1.gif) no-repeat 5px center;
+			color: #fff;
+			text-align: center;
+			font-weight: normal;
+
+		}
+
+		#list .active {
+			background: url(../img/ico2.gif) no-repeat 5px center;
+		}
+
+		#list .lis ul {
+			height: 0;
+			transition: .5s;
+			overflow: hidden;
+		}
+
+		#list .lis .show {
+			height: 160px;
+		}
+
+		.lis ul li {
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			background-color: #0299f1;
+			border: 1px solid #000;
+		}
+
+		.lis ul .hover {
+			background-color: pink;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oUl = document.getElementById('list');
+			var aH4 = oUl.getElementsByTagName('h4');
+			var aUl = oUl.getElementsByTagName('ul');
+			var aLi = null;
+			var arrLi = [];
+			var num = 0;
+			var odlaH4 = aH4[num]; //指代上一个aH4
+			for (var i = 0; i < aH4.length; i++) {
+				aH4[i].index = i;
+				aH4[i].onclick = function () {
+					if (this.className == 'active') {
+						aUl[this.index].className = '';
+						this.className = '';
+					} else {
+						aUl[odlaH4.index].className = '';
+						odlaH4.className = '';
+						odlaH4 = this;
+						aUl[this.index].className = 'show';
+						this.className = 'active';
+					};
+				};
+			};
+			for (var i = 0; i < aUl.length; i++) {
+				aLi = aUl[i].getElementsByTagName('li')
+				// console.log(aLi);
+				for (var j = 0; j < aLi.length; j++) {
+					arrLi.push(aLi[j]);
+				};
+			};
+
+			for (var i = 0; i < arrLi.length; i++) {
+				// console.log(arrLi);
+				arrLi[i].onclick = function () {
+					for (var i = 0; i < arrLi.length; i++) {
+						arrLi[i].className = '';
+					};
+					this.className = 'hover';
+				};
+			};
+		};
+	</script>
+</head>
+
+<body>
+	<ul id="list">
+		<li class="lis">
+			<h4>企业好友</h4>
+			<ul>
+				<li>张三</li>
+				<li>张三</li>
+				<li>张三</li>
+				<li>张三</li>
+			</ul>
+		</li>
+		<li class="lis">
+			<h4>我的好友</h4>
+			<ul>
+				<li>李四</li>
+				<li>李四</li>
+				<li>李四</li>
+				<li>李四</li>
+			</ul>
+		</li>
+		<li class="lis">
+			<h4>我的好友</h4>
+			<ul>
+				<li>李四</li>
+				<li>李四</li>
+				<li>李四</li>
+				<li>李四</li>
+			</ul>
+		</li>
+		<li class="lis">
+			<h4>我的好友</h4>
+			<ul>
+				<li>李四</li>
+				<li>李四</li>
+				<li>李四</li>
+				<li>李四</li>
+			</ul>
+		</li>
+		<li class="lis">
+			<h4>我的好友</h4>
+			<ul>
+				<li>李四</li>
+				<li>李四</li>
+				<li>李四</li>
+				<li>李四</li>
+			</ul>
+		</li>
+		<li class="lis">
+			<h4>黑名单</h4>
+			<ul>
+				<li>张小三</li>
+				<li>刘小四</li>
+				<li>王小三</li>
+				<li>李小四</li>
+			</ul>
+		</li>
+
+	</ul>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据类型转换小练习</title>
+    <script>
+        var arr = ['100px','abc'-6,[''],-98765,34,-2,0,'300',function(){alert(1);},null,document,[],true,'200px'-30,'23.45元',5,Number('abc'),function(){alert(3);}, ,]
+        /*
+            1 找到arr 里的所有数字： -98765 34 -2 0 5；
+            2 找到可以转成数字的的： '100px' -98765 34 -2 0 '300' 5
+            3 把转成数字以后最大值判断出来 : 300
+            4 吧 NaN 所在的位置找出来 1 13 15
+        */
+        var n = null;
+       // fn1();
+        function fn1(){
+
+            for(var i=0; i<arr.length; i++){
+                n = arr[i];
+                if(typeof n === 'string'){
+                    alert( n +'我是字符串');
+                    //'100px' '300' '23.45'
+                };
+
+            };
+
+        };
+        //fn2();
+        var u = null;
+        function fn2(){
+            for(var i=0; i<arr.length; i++){
+                u = arr[i];
+                if(isNaN(u)){
+                    alert(u + '不是数字');
+                }else{
+                    alert(u + '是数字');
+                };
+            };
+        };
+       // fn3();
+        function fn3(){
+            for(var i=0; i<arr.length; i++){
+                u = arr[i];
+                
+                if(parseFloat(u) === 300){
+                    alert( u + '我是最大值')
+                };
+            };
+        };
+        fn4();
+        var b = null;
+        function fn4(){
+            for(var i=0; i<arr.length; i++){
+                b = arr[i];
+                if(b === b){
+                    alert('我不是NaN');
+                }else{
+                    alert('我是NaN');
+                };
+
+            };
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

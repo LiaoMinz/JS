@@ -1,0 +1,48 @@
+body,span,p,img{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+#content{
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 80px auto;
+}
+#span1 {
+    display: block;
+    text-align: center;
+    line-height: 21.82px;
+    background-color: skyblue;
+}
+.tab{
+    display: block;
+    position: absolute;
+    top: 215.5px;
+    width: 40px;
+    height: 69px;
+    /* background-color:skyblue; */
+    background-image: url(../img/icon-slides.png);
+}
+.left{
+    background-position: -83px 0;
+    left: 0;
+}
+.left:hover{
+   background-position: -1px 0;
+}
+.right{
+    background-position: 40px 0;
+    right: 0;
+}
+.right:hover{
+    background-position: -43px 0;
+}
+#loading{
+    display: block;
+    text-align: center;
+    line-height: 21.82px;
+    background-color: skyblue;
+}

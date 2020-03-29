@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>清除浮动的几种方法</title>
+    <style>
+        .box {
+            /* 3 display: inline-block;清除浮动方法:
+           问题:margin左右auto自动失效 */
+            /* 2 float: left; 
+            给父级加浮动 （页面中所有元素都加浮动 margin左右auto自动失效） */
+            /* 1 height: 200px;  */
+            /* 加高度清除浮动  不建议使用扩展性不好; */
+            border: 1px solid red;
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            float: left;
+            /* 添加浮动后 此时item这个盒子已经脱离文档流 所以他不在撑开父级盒子 */
+        }
+
+        /* 4 .clearfix {
+            clear: both;
+        } */
+
+        /* 清除浮动方法： 
+        1 加高度清除浮动 不建议使用扩展性不好;
+        2 给父级加浮动 （页面中所有元素都加浮动 margin左右auto自动失效）
+        3 inline-block 问题:margin左右auto自动失效
+        4 空标签清浮动 (IE6最小高度19px 解决后Ie6下还有2px偏差)
+        5 br 清除浮动 问题 （不符合工作当中： 结构 样式 行为 三者分离的要求）
+         */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item"></div>
+        <!-- 5 <br clear="all"> -->
+        <!-- 4 <div class="clearfix"></div> -->
+    </div>
+</body>
+
+</html>

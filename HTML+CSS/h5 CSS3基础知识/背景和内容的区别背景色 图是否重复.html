@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 600px;
+            height: 1000px;
+             /* 容器没有宽高时由内容撑开宽高 */
+            border:10px solid red;
+            margin: 100px auto; 
+            /* background-color: pink;
+            background-image: url('image/0.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; */
+            background: red url('image/0.jpg') no-repeat center center scroll;   /*  background复合属性 */
+        }
+    </style>
+</head>
+<body>
+        <!-- background 背景
+            background-color：背景颜色
+                            red；    
+                            背景颜色不会占用容器宽高
+                            颜色英文关键字
+                            rgb（）；
+                            十六进制
+
+            background-image：背景图片
+                               url（c.jpg） 背景图片路径
+                               背景图片默认平铺
+                               背景图不会影响容器宽高
+
+
+            background-repeat：背景图片是否平铺
+                                no-repeat 不平铺
+                                repeat-x  x轴方向平铺
+                                repeat-y  y轴方向平铺
+                                repeat    x y 轴都平铺
+
+            background-position：背景图片位置
+                                center center； 
+                                  x轴   y轴
+                                除用px单位以外还可以用英文关键字
+                            x轴    left right center
+                            y轴    top  bottom center
+
+
+
+
+            background-attachment：背景是否滚动
+                                    fixed； 固定在浏览器可视区域;
+                                    scrool  跟随浏览器滚动条滚动;                   
+                                
+                                
+                                
+                                
+                                
+        -->
+        <div>
+            <!-- 这是一张图片
+            <img src="image/bd_logo1.png" alt="" width="200" height="150"> -->
+        </div>
+</body>
+</html>

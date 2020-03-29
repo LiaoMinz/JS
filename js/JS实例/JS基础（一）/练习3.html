@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习三</title>
+    <style></style>
+    <script>
+        window.onload = function (){
+            var oInput = document.getElementById('yko');
+            var oInput2 = document.getElementById('tgb');
+            var oImg = document.getElementById('img1');
+            var oP = document.getElementById('p');
+            var oSpan = document.getElementById('span1');
+            var oInput3 = document.getElementById('ert');
+            var oInput4 = document.getElementById('tre');
+            var arrImg = ['../img/1.jpg','../img/2.jpg','../img/3.jpg','../img/4.jpg','../img/5.jpg'];
+            var arrP = ['第一张图片','第二张图片','第三张图片','第四张图片','第五张图片'];
+
+            var num = 0;//初始化
+            var p = 0;
+            var onoff = true;//开关 onoff为true是顺序播放模式 onoff为false为循环播放模式
+            function btn() {
+                oImg.src = arrImg[num];
+                oP.innerHTML = arrP[num];
+                oSpan.innerHTML = num+1 + '/' +arrP.length;
+            }
+        oInput4.onclick = function () {
+            num++;//点击下一张时执行num++;此时num为1
+        if(num > arrImg.length-1){//1<4执行else段代码;当num>4时进入顺序播放模式;
+            if(onoff){
+            num = arrImg.length-1;
+            alert('已经最后一张了'); 
+            }
+            else{//进入循环模式;
+            num = p;
+        }
+        };
+        btn();
+
+        };
+        oInput3.onclick = function () {
+            num--;//点击上一张时执行num--;此时num为arrP-1
+            if(num < p){
+                if(onoff){
+                num = p;
+                alert('已经最后一张了');
+                }
+                else{
+                num = arrImg.length-1;
+          
+            }
+            }
+            btn();
+        };
+        oInput.onclick = function(){
+            onoff = true;
+        };
+        oInput2.onclick = function(){
+            onoff = false;
+        };
+
+        
+
+
+    };
+    
+    
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <div class="div1">
+            <input id="yko" class="tt" type="button" value="顺序播放">
+            <input id="tgb" class="tt" type="button" value="循环播放">
+        </div>
+        <div>
+            <img id="img1" src="" alt="" width="400" height="300">
+        </div>
+        <p id="p">文字加载中....</p>
+        <span id="span1">页码加载中....</span>
+        <div class="okl">
+            <input id="ert" class="rt" type="button" value="上一张">
+            <input id="tre" class="rt" type="button" value="下一张">
+        </div>
+
+    </div>
+</body>
+
+</html>

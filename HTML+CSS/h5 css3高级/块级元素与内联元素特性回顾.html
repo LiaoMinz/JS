@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>块级元素与内联元素特性回顾</title>
+    <style>
+        div {
+
+            height: 400px;
+            background-color: red;
+            margin-bottom: 30px;
+        }
+
+        /* 块元素的第一个特征 
+                1 在没设置宽度的时候自行撑满一行
+                2 默认独占一行
+                3 支持所有CSS命令 */
+        span {
+            /* width: 100px;
+            height: 100px; */
+            background-color: pink;
+        }
+
+            /* 内联元素的特性:
+                1 宽高由内容撑开
+                2 不支持宽高
+                3 不支持上下margin 支持pading
+                4 一行上可以继续显示跟同类的标签
+                5 代码换行被解析 不管写多少空格都会被解析成一个空格 */
+    </style>
+
+</head>
+
+<body>
+    <div> block</div>
+    <div>block</div>
+
+    <span> inline</span>
+</body>
+
+</html>

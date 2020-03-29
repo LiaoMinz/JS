@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数传参 参数类型</title>
+
+    <script>
+        /*
+            函数传参  函数传递参数
+            参数指的就是JS的数据类型:
+            数字  字符串  布尔值  函数   对象  未定义
+        */
+        //fn1(100,'px');
+
+        // function fn1(a,b){
+        //     alert(a + b);
+        // };
+        //fn2('liaomin');
+        //fn2('你是猪');
+        // function fn2(c){
+        //     alert(c.length);
+        //     alert(c.charAt(2));
+
+        // };
+        // function fn4(b){
+        //     alert(b);
+        // }
+        // fn3(fn4);
+        // //fn3(function(a){alert(a);});
+        // function fn3(fn){
+        //     //fn(100);
+        //     fn4(200);
+        // };
+
+        fn5(window,document);
+        function fn5(w,d){ //参数是一一对应关系
+            w.onload = function(){
+                d.body.innerHTML = 234;
+            };
+        };
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

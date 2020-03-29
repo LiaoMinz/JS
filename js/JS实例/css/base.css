@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+body,div,ul,li,img,input,p,img{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style-type: none;
+}
+#box{
+    position: relative;
+    width: 237px;
+    height: 476px;
+    margin: 65px auto;
+    background: url('../img/phone.jpg');
+}
+#box_con{
+    position: absolute;
+    top: 70px;
+    left: 23px;
+    width: 191px;
+    height: 295px;
+    overflow: auto;
+
+
+}
+#inp_form{
+    position: absolute;
+    bottom: 72px;
+    right: 15px;
+   width: 208px;
+   height: 30px;
+   /* border-top: 1px solid skyblue; */
+   /* background-color: skyblue;  */
+}
+.ml{
+    margin-left: 9px;
+}
+#img1{
+    display: block;
+    float: left;
+    margin-top: 2px;
+    margin-left: 10px;
+
+}
+#text{
+    display: block;
+    float: left;
+    width: 102px;
+    height: 22px;
+}
+#btn{
+    display: block;
+    width: 40px;
+    height: 25px;
+    float: left;
+    border: 0;
+}
+.good:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.fl img{
+    float: left;
+}
+.fl p{
+    float: left;
+    text-align: center;
+    line-height:24px;
+    background-color: green;
+    max-width: 75%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+.fr img {
+    float: right;
+}
+
+.fr p {
+    float: right;
+    text-align:center;
+    line-height: 24px;
+    background-color: green;
+    max-width: 75%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}

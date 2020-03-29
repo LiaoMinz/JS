@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位思考 相对定位偏移量</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .div1 {
+            background-color: red;
+        }
+
+        .div2 {
+            /* margin-top: 200px;
+            margin-left: 200px; */
+            position: relative;
+            top: 200px;
+            left: 200px;
+            background-color: blue;
+        }
+
+        .div3 {
+            background-color: green;
+        }
+
+        /* 
+        相对定位的特征
+            1 不影响元素本身的特性
+            2 不使元素脱离文档流（元素移动之后原始位置会被保留）
+            3 如果没有定位偏移量（指四个方向top left right bottom）对元素本身没有任何影响
+            4 提升层级
+        
+        
+         */
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+</body>
+
+</html>

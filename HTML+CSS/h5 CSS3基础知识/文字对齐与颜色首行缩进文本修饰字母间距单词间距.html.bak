@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        h3{
+            /* width: 1000px;  
+            注释此条后进入强制不换行*/
+            /* width: 100px; */
+            height: 50px;
+            border: 1px solid skyblue;
+            line-height: 50px;
+            white-space: nowrap;                                    
+            font-family: '黑体';
+
+        }
+
+        h3:nth-child(1){
+            color:red;
+            text-align: right; 
+            /* 文本右对齐 */
+        }
+        h3:nth-child(2){
+            color: yellow;
+            text-align: center;
+
+            /* 文本居中对齐 */
+        }
+        h3:nth-child(3){
+
+            color: blue; 
+             /* 文字颜色 */
+
+            text-align: left;
+            /* 文本左对齐*/
+
+            text-indent: 3em;
+            /*  缩进了3个字 （不管字体多大始终缩进3个字） */
+
+             text-decoration: underline;
+             /*下划线 */
+
+             /* letter-spacing: 10px;   注释 为了展现word-spacing才注释此条！！*/
+
+             /* 文字与文字之间的间距 */
+             word-spacing: 10px;
+            /* 每个单词之间的间距 中文中用空格来隔开每个词语才能被浏览器解析 */
+        }
+    
+    
+    </style>
+</head>
+<body>
+        <!-- color           文字颜色
+        text-align      文本对齐方式
+                left(默认值)
+                right
+                center
+
+
+        text-indent     首行缩进    （em缩进字符）
+                        em是根据字体大小来决定的
+                        1em是一个字的大小（不管文字如何变化）
+
+        text-decoration 文本修饰
+                        underline  下划线
+                        none       正常
+
+        letter-spacing  字母间距
+                        每个字之间的间距    
+
+        word-spacing    单词间距    （以空格解析为单位）
+                        在中文里用空格来隔开每个词语才能被浏览器解析
+
+
+        white-space     强制不换行
+                    nowrap 不换行
+                    normal 正常
+    
+    
+    
+            一个空格有多大？
+                宋体字体下文字大小的一半
+                空格的大小
+                测量文字大小时最好是从上到下进行测量
+                每个文字与文字之间会有1像素的间隔
+                一个空格的大小是8像素;
+                    记录
+                        默认16px  8px
+                            12px  6px
+                    字体格式font-family 格式不一样时 空格大小不一致
+            font-family为宋体时空格大小: 是字体大小的一半  
+    
+    -->
+    <h3>This is a liaomin</h3>
+    <h3>This is a huanghua</h3>
+    <h3>This is a zhangsan</h3>
+ </body>
+</html>

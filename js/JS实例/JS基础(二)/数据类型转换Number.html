@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据类型转换 Number</title>
+    <script>
+        var a = '+100';
+       // alert(a + 100);//100100 任何数据和字符串相加都是拼接；
+        //方法
+       // Number(a);//100
+       // alert( Number(a));//100
+       var a1 = '';
+       //alert(Number(a1));//0
+       var a2 = true;
+       //alert(Number(a2))//1 true 1  flase 0
+    // var a3 = ['123'];
+    // alert(Number(a3));      //0  
+        var a4 = null;
+        // alert(Number(a4));//0
+        var a5;
+        //alert( Number(a5));//NaN
+
+
+
+    /////////////////////////////////////////////////////
+         var json = {abc:123}
+        // alert(Number(json));//NaN
+
+        var a3  = function(){alert(2)};
+        //alert( typeof Number(a3));//NaN  nat a number 不是数字又是数字类型 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

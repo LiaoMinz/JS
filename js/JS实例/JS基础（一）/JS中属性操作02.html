@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性操作02</title>
+    <script>
+
+        /* oP.innerHTML   读取所有的HTML内容
+
+         oP.innerHTML = 新的值 替换或修改所有的HTML内容
+        
+        
+        
+        
+        
+        */
+
+        window.onload = function (){
+
+            var oImg = document.getElementById('img1');
+
+            var oBtn = document.getElementById('btn1');
+
+            var oText = document.getElementById('text1');
+            var oP = document.getElementById('p1');
+
+            oBtn.onclick = function(){
+                // oImg.src = oText.value;
+                // alert(oP.innerHTML);
+                oP.innerHTML = oText.value;
+                oText.value = '';
+            };
+        };
+    
+    </script>
+</head>
+<body>
+    <input id="text1" type="text" value="">
+    <input id="btn1" type="button" value="按钮">
+    <br>
+    <!-- <img id="img1" src="img/1.jpg" alt="" width="300"> -->
+    <p id="p1">段落</p>
+    
+</body>
+</html>

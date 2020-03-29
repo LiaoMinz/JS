@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS作用域概念 域解析规则 表达式</title>
+    <script>
+        // 作用域:
+        //  域：空间 范围  区域
+        //作用： 读  写
+        /*
+            浏览器：
+                JS解析器
+                1 找一些东西: var function 参数
+                    第一步根据JS中的关键字去找 var function 参数
+                    a = 未定义； 
+                    在正式运行代码之前 都提前赋了一个值 ：这个值就是undefined 未定义
+                    fn1 = function fn1(){alert(2);};
+                    所有的函数 在正式运行代码之前，都是整个函数块，
+                    之前第一步 称为 JS的域解析
+                2逐行解读代码:
+                表达式 ： = + - * / % ++ -- ! 参数....
+        
+        */
+        // alert(a); //undefined
+        // var a = 1;  
+        // function fn1(){alert(2);};
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

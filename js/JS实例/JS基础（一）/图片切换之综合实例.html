@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片切换综合实例</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #pic {
+            width: 1000px;
+            height: 560px;
+            margin:  0 auto;
+            position: relative;
+        }
+
+        #pic img {
+            width: 1000px;
+            height: 560px;
+            display: block;
+        }
+
+        #pic ul {
+            width: 30px;
+            position: absolute;
+            top: 0;
+            right: -40px;
+        }
+
+        #pic li {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 10px;
+            background-color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pic">
+        <img src="img/2.jpg" alt="">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>V字切换</title>
+  <style>
+    #content {
+        width: 500px;
+        height: 500px;
+        background-color: skyblue;
+        border: 1px solid red;
+        position: relative;
+      }
+      #content div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        font-size: 18px;
+        text-align: center;
+        line-height: 100px;
+      }
+    </style>
+  <script>
+    /*
+      
+        I  left  top
+        0    0    0
+        1    100  100
+        2    200  200
+        3    300  100
+        4    400  0
+
+        left = i * 100;
+        如果i小于等于2的
+        top = i * 100
+        否则
+        top = 400 - i * 100;
+
+      */
+      window.onload = function() {
+        var oBtn = document.getElementById("btn1");
+        var oDiv = document.getElementById("content");
+        var str  = "";
+        var l = 0;
+        var t = 0;
+        oBtn.onclick = function() {
+          for (var i = 0; i < 5; i++) {
+            l = i * 100;
+            if (i <= 2) {
+              t = i * 100;
+            } else {
+             t = 400 - i * 100;
+            }
+            
+            str += '<div style="top:' + t +'px;left:' + l +'px;">' + i + "</div>";
+          }
+            oDiv.innerHTML = str;
+        };
+      };
+    </script>
+</head>
+
+<body>
+  <input name="" id="btn1" class="" type="button" value="click" />
+  <div id="content">
+    <!-- <div style="top:0px;left:0px;">0</div>
+      <div style="top:100px;left:100px;">1</div>
+      <div style="top:200px;left:200px;">2</div>
+      <div style="top:100px;left:300px;">3</div>
+      <div style="top:0px;left:400px;">4</div> -->
+  </div>
+</body>
+
+</html>

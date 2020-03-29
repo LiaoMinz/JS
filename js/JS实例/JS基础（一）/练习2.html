@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习2</title>
+    <script>
+        window.onload = function () {
+
+            var oSpan = document.getElementById('span1');
+            var oImg = document.getElementById('img1');
+            var oBtnLeft = document.getElementById('btnleft');
+            var oBtnRight = document.getElementById('btnright');
+            var oLoading = document.getElementById('loading');
+            var arrImgUrl = ['../img/1.jpg', '../img/2.jpg', '../img/3.jpg', '../img/4.jpg', '../img/5.jpg'];
+            var arrText = ['小米8', '小米电视', '小米智能摄像头', '小米笔记本', '小米Mix'];
+
+            var num = 0; //初始化
+            var timer = null;
+			
+            clearInterval(timer);
+            function oTab() {
+                oSpan.innerHTML = num + 1 + '/' + arrText.length;
+
+                oImg.src = arrImgUrl[num];
+
+                oLoading.innerHTML = arrText[num];
+            };
+            oTab();
+			
+            function autoplay(){
+                timer = setInterval(function(){
+                    Tab();
+                },1000)
+            };
+            autoplay();
+            oImg.onmouseover = function(){
+                clearInterval(timer);
+            };
+            oImg.onmouseout = function(){
+                autoplay();
+            };
+            
+            oBtnLeft.onclick = function(){
+
+                Tab();
+            };
+
+            function Tab() {
+                num++;
+                if (num == arrText.length) {
+                    num = 0;
+                };
+                oTab();
+                // oSpan.innerHTML = num + 1 + '/' + arrText.length;
+
+                // oImg.src = arrImgUrl[num];
+
+                // oLoading.innerHTML = arrText[num];
+                
+
+            };
+
+            oBtnRight.onclick = function () {
+                num--;
+                if (num == -1) {
+                    num = arrText.length - 1;
+                }
+                oTab();
+                // oSpan.innerHTML = num + 1 + '/' + arrText.length;
+
+                // oImg.src = arrImgUrl[num];
+
+                // oLoading.innerHTML = arrText[num];
+            };
+
+        };
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <span id="span1">数字正在加载中....</span>
+        <img id="img1" width="1000" height="500">
+        <a id="btnleft" class="tab left"></a>
+        <a id="btnright" class="tab right"></a>
+        <p id="loading">图片正在加载中....</p>
+    </div>
+</body>
+
+</html>

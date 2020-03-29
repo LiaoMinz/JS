@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS数据类型练习</title>
+    <script>
+        window.onload = function(){
+            var oText = document.getElementById('text');
+            var oBtn = document.getElementById('btn');
+            var Vl =  null;
+            oBtn.onclick = function(){
+                Vl = oText.value;
+                if(Vl === ''){
+                    alert('请输入内容');
+                }else if(Number(Vl)){
+                    alert('输入的是数字 ok');
+                }else if(isNaN(Vl)){
+                    alert('输入的不是数字，请输入数字')
+                }else if(Vl.length > 5 && Vl.length < 10){
+                    alert('输入的长度不符合')
+                }
+            };
+        };
+    ///////////////////
+    ///////此习题失败了  
+    </script>
+</head>
+<body>
+    <input id="text" type="text" name="" id="">
+    <input id="btn" type="button" value="登入">
+</body>
+</html>

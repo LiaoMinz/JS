@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        position: relative;
+    }
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    h1{
+        margin-top: 10px;
+    }
+    #bowling{
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        background-color: red;
+        border: 0;
+    }
+    .code{
+        position: absolute;
+        top: 50px;
+        left: 120px;
+        width: 98px;
+        height: 98px;
+        border: 3px solid #000;
+        background-color: pink;
+    }
+    .change{
+        display: none;
+        width: 400px;
+        height: 200px;
+        background-color: #fff;
+        margin: 150px auto;
+        border: 25px solid rgba(0,0,0,.5)
+    }
+    .center{
+        margin-top: 20px;
+    }
+    /* .bgc:nth-child(1){
+        color: #fff;
+    } */
+    .center .bgc{
+        width: 100%;
+        height: 30px;
+        background-color:#fff;
+        margin-top: 5px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .bgc .col{
+        display: inline-block;
+        width: 50px;
+        height: 100%;
+        background-color: red;
+        border: 0;
+        margin-left: 5px;
+        color: #fff;
+    }
+    .center .bgc .yellop{
+        background-color: yellow;
+    }
+    .center .bgc .bluer{
+        background-color: #0090CE;
+    }
+
+    .bgc .colo{
+        display: inline-block;
+        width: 48px;
+        height: 100%;
+        background-color: #ccc;
+        margin-left: 5px;
+        border: 1px solid beige; 
+        color: beige;
+    }
+    .colo:hover{
+        background-color: #FF6633;
+        border: 2px solid #000;
+    }
+    .bgc1{
+        width: 100%;
+        height: 30px;
+        background-color:#fff;
+        margin-top: 25px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .bgc1 .recovery{
+        display: inline-block;
+        width: 50px;
+        height: 100%;
+        background-color: blue;
+        margin-left:15px;
+        border: 0; 
+        
+
+    }
+
+
+
+    
+    </style>
+    <script>
+        window.onload = function (){
+            //获取元素
+            var oBody = document.getElementById('bid');
+
+            var oDiv12 = document.getElementById('divneo');
+
+            var oDiv13 = document.getElementById('sho');
+
+            var oAn = document.getElementById('redo');
+
+            var oAn1 = document.getElementById('a2');
+
+            var oAn2 = document.getElementById('a3');
+
+            var oAn3 = document.getElementById('a11');
+
+            var oAn4 = document.getElementById('a22');
+
+            var oAn5 = document.getElementById('a33');
+
+            var oAn6 = document.getElementById('a12');
+
+            var oAn7 = document.getElementById('a23');
+
+            var oAn8 = document.getElementById('a34');
+
+            var oBtn1 = document.getElementById('bowling');
+
+            var oAn9 = document.getElementById('btn2');
+
+            var oAn10 = document.getElementById('btn3');
+            function show(){
+
+                oDiv13.style.display = 'block';
+
+                oBody.style.backgroundColor = 'rgba(0,0,0,.3)';
+
+            };
+            oBtn1.onclick = show;
+
+            function colow(){
+                // oBtn1.onclick = false;
+                // alert('清除事件1');
+                oDiv12.style.backgroundColor = 'red'; 
+            };
+            oAn.onclick = colow; 
+
+            function oloi(){
+
+                oDiv12.style.backgroundColor = 'yellow';
+                 
+            };
+            oAn1.onclick = oloi;
+           function yello(){
+
+                oDiv12.style.backgroundColor = '#0090CE';
+            };
+            oAn2.onclick = yello;
+            function gfd(){
+
+                oDiv12.style.width = '200px';
+
+            };
+            oAn3.onclick = gfd;
+            function lok(){
+                oDiv12.style.width = '300px';
+            };
+            oAn4.onclick = lok;
+            function link(){
+                oDiv12.style.width = '400px';
+            };
+            oAn5.onclick = link;
+
+            function sso(){
+
+                oDiv12.style.height = '200px';
+
+            };
+            oAn6.onclick = sso;
+            
+            
+            function sse(){
+
+                oDiv12.style.height = '300px';
+
+            };
+            oAn7.onclick = sse;
+
+            function ssr(){
+
+            oDiv12.style.height = '400px';
+
+            };
+            oAn8.onclick = ssr;
+
+        function sst(){
+
+            oDiv12.style.width = '100px';
+
+            oDiv12.style.height = '100px';
+
+            oDiv12.style.backgroundColor = 'pink';
+
+        };
+            oAn9.onclick = sst;
+
+            function ssg(){
+
+            oDiv13.style.display = 'none';
+
+        };
+            oAn10.onclick = ssg;
+    };
+    
+    
+    </script>
+</head>
+
+<body id="bid">
+    <h1>请为下面的div设置样式：
+        <input id="bowling" type="button" value="点击设置">
+    </h1>
+    <div id="divneo" class="code"></div>
+    <div id="sho" class="change">
+        <!--获取元素ID-->
+        <ul class="center">
+            <li class="bgc">
+                &nbsp&nbsp&nbsp&nbsp&nbsp请选择背景色:&nbsp&nbsp
+                <input id="redo" class="col" type="button" value="红">
+                <input id="a2" class="col yellop" type="button" value="黄">
+                <input id="a3" class="col bluer" type="button" value="蓝">
+
+            </li>
+            <li class="bgc">
+                请选择宽度(px)：
+                <input id="a11" class="colo" type="button" value="200">
+                <input id="a22" class="colo" type="button" value="300">
+                <input id="a33" class="colo" type="button" value="400">
+
+            </li>
+            <li class="bgc">
+                请选择高度(px)：
+                <input id="a12" class="colo" type="button" value="200">
+                <input id="a23" class="colo" type="button" value="300">
+                <input id="a34" class="colo" type="button" value="400">
+
+            </li>
+            <li class="bgc1">
+                <input id="btn2" class="recovery" type="button" value="恢复">
+                <input id="btn3" class="recovery" type="button" value="确定">
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="div2"></div>
+
+</body>
+
+</html>

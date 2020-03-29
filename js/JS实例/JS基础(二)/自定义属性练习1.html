@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义属性练习1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #box {
+            width: 1000px;
+            margin: 300px auto;
+            /* background-color: green; */
+        }
+
+        #box .box2 {
+            position: relative;
+            width: 700px;
+            height: 400px;
+            margin: 0 auto;
+            /* background-color: yellow; */
+
+        }
+
+        .box3 {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100%;
+
+        }
+
+        .box3::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box3 a {
+            display: block;
+            width: 41px;
+            height: 69px;
+
+        }
+
+        .left {
+            float: left;
+            background: url(../img/icon-slides.png) no-repeat -83px 0;
+        }
+
+        .left:hover {
+            background: url(../img/icon-slides.png) no-repeat 0 0;
+        }
+
+        .right {
+            float: right;
+            background: url(../img/icon-slides.png) no-repeat -126px 0;
+        }
+
+        .right:hover {
+            background: url(../img/icon-slides.png) no-repeat -41px 0;
+        }
+
+        .box4 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+        }
+
+        .box4::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .box4 .list {
+            margin: 0 auto;
+            width: 500px;
+            height: 80px;
+
+        }
+
+        .list::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .lis {
+            float: left;
+            height: 80px;
+        }
+
+        .lis span {
+            position: absolute;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            margin: 0 10px;
+            border: 2px solid #fff;
+            display: none;
+        }
+
+        .lis .show {
+            display: block;
+        }
+
+        .lis span::after {
+            position: absolute;
+            top: 50px;
+            left: 14px;
+            content: '';
+            display: block;
+            border: 10px solid #fff;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            /* display: none; */
+        }
+
+        .lis i {
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 6px;
+            margin: 60px 10px;
+
+        }
+
+        .lis i:hover {
+            background-color: #333;
+            border: 1px solid #000;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBox2 = document.getElementById('box2');
+            var oImg = document.getElementById('image');
+            var oLeft = document.getElementById('left');
+            var oRight = document.getElementById('right');
+            var oBox4 = document.getElementById('box4');
+            var aSpan = oBox4.getElementsByTagName('span');
+            var arrSpan = [];
+            var aI = oBox2.getElementsByTagName('i');
+            // console.log(aI);
+            var arrImg = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg'];
+            var num = 0;
+
+            tabR();
+            tabL();
+            oRight.onclick = function () {
+                num++;
+                if (num == arrImg.length) {
+                    num = 0;
+                };
+                tabR();
+            }
+            oLeft.onclick = function () {
+                num--;
+                if (num == -1) {
+                    num = arrImg.length - 1;
+                }
+                tabL();
+            }
+
+            function tabR() {
+                oImg.src = arrImg[num];
+            };
+
+            function tabL() {
+                oImg.src = arrImg[num];
+            };
+
+            for (var i = 0; i < arrImg.length; i++) {
+                arrSpan.push(aSpan[i]);
+            };
+            for (var i = 0; i < arrSpan.length; i++) {
+                aI[i].index = i;
+                aI[i].onmouseover = function () {
+                    arrSpan[this.index].className = 'show';
+                    oImg.src = arrImg[this.index];
+                };
+                aI[i].onmouseout = function () {
+                    arrSpan[this.index].className = '';
+                    oImg.src = arrImg[this.index];
+                };
+            };
+
+
+        };
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <div class="box2" id="box2">
+            <img id="image" src="" alt="" width="700" height="400">
+            <div class="box3">
+                <a id="left" class="left" href=""></a>
+                <a id="right" class="right" href=""></a>
+            </div>
+            <div class="box4" id="box4">
+                <ul class="list">
+                    <li class="lis" id="">
+                        <span>
+                            <img class="img" src="img/1.jpg" alt="" width="50" height="50">
+                        </span>
+                        <i></i>
+                    </li>
+                    <li class="lis">
+                        <span>
+                            <img class="img" src="img/2.jpg" alt="" width="50" height="50">
+                        </span>
+                        <i></i>
+                    </li>
+                    <li class="lis">
+                        <span>
+                            <img class="img" src="img/3.jpg" alt="" width="50" height="50">
+                        </span>
+                        <i></i>
+                    </li>
+                    <li class="lis">
+                        <span>
+                            <img class="img" src="img/4.jpg" alt="" width="50" height="50">
+                        </span>
+                        <i></i>
+                    </li>
+                    <li class="lis">
+                        <span>
+                            <img class="img" src="img/5.jpg" alt="" width="50" height="50">
+                        </span>
+                        <i></i>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS数据类型</title>
+    <script>
+        //JS中的数据类型 数字 (NaN) Number，字符串 string，布尔值 Boolean，函数 function，
+        //对象(object  [] json null) 未定义(undefined)
+
+        //typeof 判断数据类型
+
+        //var i = 0;
+        //alert(typeof (i));//Number数字
+        //var s = ' miaov '; //字符串里面加空格会被计算长度 
+       // alert(typeof(s));// 长度为7 string 字符串
+      // alert(s.length);//length可以查看字符串长度
+     // alert(s.charAt(7)); //使用charAt()方法可以找到字符串中某一个
+     //在JS中数字总是已0开始
+   // var b = true; //布尔值 Boolean 只有两个值 true真 flase假
+    //alert(typeof b);
+    //if(120<90){};只要这种条件判断都会转成布尔值 true 或是flase
+    //for(var i=0; i<3; i++){}只要这种条件判断都会转成布尔值 true 或是flase
+
+        //var fn = function(){alert(1)};
+        //alert(fn); 就是个函数
+       // fn();函数是不会自动执行的，需要调用它才会执行
+    //    function fn1(){
+    //     alert(2);
+    //    };
+    //    fn1();
+       //alert(typeof fn1) function
+       // var obj = window;
+       //var obj = document;
+       // alert(typeof obj);//object 物体 东西   对象
+       //alert(typeof obj);//object
+      // obj.abc = 12345;//给obj这个对象添加自定义属性；
+      // obj.onoff = true;//只要不是空的东西就可以无限添加自定义属性
+       //alert(obj.onoff);//12345；
+      // obj.fn1 = function(){alert(1)};
+       //obj.fn1();//1
+        var arr = [1,2,3,4,5];
+    //    alert(arr.length);
+    //    arr[1] = 34567;
+    //    alert(arr);
+    //    alert(typeof arr);//object 数组也是对象
+       // arr.abc = 1000;也可以给数组添加自定义属性
+        //arr.fn1 = function(){alert(2)};
+       //arr.fn1();
+      //  alert(arr.fn1);
+        //json = {name:'miaov',age:5};
+        //alert(json.name +'今年' + json.age + '岁了');
+        //lert(typeof json);//object 
+        var n = null;//空
+       // alert(typeof n);object 对象
+    //    n.abc = 234;
+    //    alert(n);空
+       //null无法添加自定义属性
+    //    var o;
+    //    alert(typeof o);//  未定义 undefined 声明了变量但未赋值给此变量
+    //undefined 表示你写的代码出问题了
+
+    </script>
+</head>
+<body>
+    ECMAscript: 标准  核心
+    HTML标签类型 block inline inline-block table...
+    var a = 1;
+    vao a = 1;//不能由着自己的性子来写必须遵循ECMAscript标准
+</body>
+</html>

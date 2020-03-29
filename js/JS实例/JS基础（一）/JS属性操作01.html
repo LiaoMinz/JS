@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性操作1</title>
+    <script>
+    /*
+    HTML 属性操作：读   写；
+        属性名：
+        属性值：
+
+    属性的读操作： 获取 . 找到  . 
+        语法：  元素.属性名
+    
+    属性的写操作：（"添加"） 替换   修改
+        语法：  元素.属性名 = 新的值
+
+    */
+        window.onload = function (){
+
+            var oBtn = document.getElementById('btn1');
+
+            var oText = document.getElementById('text1');
+
+            var oSelect = document.getElementById('select1'); 
+
+            oBtn.onclick = function (){
+ 
+
+                /* alert(oBtn.id); */
+
+                /* alert(oBtn.type); */
+
+               /* alert(oSelect.value);  */
+
+               // "淘宝" + "杭州  =》淘宝杭州
+
+               //'淘宝' + '在' + '杭州' =》淘宝在杭州
+
+               //alert (oText.value + '在' + oSelect.value);
+
+               /* oSelect.value = oText.value; */
+
+                 /* oBtn.value = "buttom"; */
+
+                // oBtn.value = "button";
+
+               // oText.value = "按钮";
+
+               oText.value = oSelect.value;
+        };
+            
+
+        
+    
+        /* var oKey = document.getElementById('key');
+
+        
+        
+        /* oBtn.onclick = function (){
+            oBtn.value = "buttom";
+        }; */
+    };
+    </script>
+</head>
+
+<body>
+
+    <div class="logingbar">
+        <!-- <h1 class="logo">
+            <img src="bd_logo1.png" alt="" width="300" height="80">
+        </h1> -->
+        <p class="p1">账号：
+            <input id="text1" class="logintr" type="text" placeholder="邮箱/用户名/已验证手机" value="">
+            <select name="" id="select1">
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+                <option value="长沙">长沙</option>
+            </select>
+        </p>
+    <!--    <p class="p2">密码：
+            <input id="key" class="logintr1" type="password" value="">
+            
+        </p>-->
+        <p class="login">
+            <input id="btn1" class="Land" type="button" value="登陆">
+        </p>
+    </div>
+
+</body>
+
+</html>

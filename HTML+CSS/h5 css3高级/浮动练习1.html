@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>浮动练习一</title>
+    <style>
+      body {
+        margin: 0;
+        font-size: 14px;
+        font-family: "微软雅黑";
+        background-color: #98606f;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #6e6e6e;
+      }
+
+      .box {
+        width: 762px;
+        height: 360px;
+        margin: 200px auto;
+        background-color: #fff;
+      }
+      .box_samall {
+        width: 663px;
+        margin: 0px auto;
+      }
+      .box .item {
+        width: 100%;
+        padding-top: 32px;
+        border-bottom: 1px dashed #e5e5e5;
+        box-sizing: border-box;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .box .item h3 {
+        width: 100%;
+        border-top: 2px solid #e7788d;
+        background: url(image/地球全球.png) no-repeat left center;
+        line-height: 48px;
+        text-indent: 30px;
+        color: #ec97a6;
+      }
+
+      .item ul {
+        width: 100%;
+      }
+      .item ul .icon {
+        width: 132px;
+        height: 150px;
+        float: left;
+      }
+      ul .icon i {
+        display: block;
+        width: 100%;
+        height: 100px;
+      }
+      .icon_1 {
+        background: url(image/图层5拷贝.png) no-repeat center center;
+      }
+      .icon_2 {
+        background: url(image/音乐.png) no-repeat center center;
+      }
+      .icon_3 {
+        background: url(image/手机验证2.png) no-repeat center center;
+      }
+      .icon_4 {
+        background: url(image/飞机.png) no-repeat center center;
+      }
+      .icon_5 {
+        background: url(image/短信.png) no-repeat center center;
+      }
+      ul .icon a {
+        width: 100%;
+        display: inline-block;
+        line-height: 50px;
+        text-align: center;
+        color: #000;
+      }
+      .box .text {
+        width: 100%;
+      }
+      .list_top,
+      .list_bottom {
+        width: 100%;
+        margin-top: 20px;
+      }
+      .text li {
+        width: 94px;
+        height: 32px;
+        float: left;
+        text-align: center;
+        line-height: 32px;
+      }
+      .text li a:hover {
+        color: #e7788d;
+      }
+      .text .pink {
+        background-color: #e7788d;
+        color: #fff;
+      }
+      .text .border_right {
+        padding: 0 18px;
+        border-right: 1px solid #a5a5a5;
+
+      }
+      .active{
+          color: #e7788d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box ">
+      <div class="box_samall">
+        <div class="item clearfix">
+          <h3>全球通业务+</h3>
+          <ul class="clearfix">
+            <li class="icon">
+              <i class="icon_1"></i>
+              <a href="">信息管家</a>
+            </li>
+            <li class="icon">
+              <i class="icon_2"></i>
+              <a href="">无线音乐专区</a>
+            </li>
+            <li class="icon">
+              <i class="icon_3"></i>
+              <a href="">手机证券</a>
+            </li>
+            <li class="icon">
+              <i class="icon_4"></i>
+              <a href="">飞信</a>
+            </li>
+            <li class="icon">
+              <i class="icon_5"></i>
+              <a href="">短信回执</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text">
+          <div class="list_top clearfix">
+            <ul class="clearfix">
+              <li class="pink">
+                <a class="pink" href="">基本业务</a>
+              </li>
+              <li>
+                <a class="border_right" href="">国际漫游</a>
+              </li>
+              <li>
+                <a class="border_right active" href="">国际长途</a>
+              </li>
+              <li>
+                <a class="border_right" href="">国内长途</a>
+              </li>
+              <li>
+                <a class="border_right" href="">国内漫游</a>
+              </li>
+              <li>
+                <a class="border_right" href="">本地通话</a>
+              </li>
+              <li>
+                <a href="">更多>></a>
+              </li>
+            </ul>
+          </div>
+          <div class="list_bottom clearfix">
+            <ul class="clearfix">
+              <li class="pink">
+                <a class="pink" href="">新业务</a>
+              </li>
+              <li>
+                <a class="border_right" href="">手机阅读</a>
+              </li>
+              <li>
+                <a class="border_right" href="">手机支付</a>
+              </li>
+              <li>
+                <a class="border_right" href="">139邮箱</a>
+              </li>
+              <li>
+                <a class="border_right" href="">手机上网</a>
+              </li>
+              <li>
+                <a class="border_right" href="">视频会议</a>
+              </li>
+              <li>
+                <a href="">更多>></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

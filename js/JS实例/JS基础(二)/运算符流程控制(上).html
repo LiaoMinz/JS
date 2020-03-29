@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>运算符流程控制（上）</title>
+    <style>
+        li {
+            height: 24px;
+            list-style: none;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            // // <!--5%2 = 1-->
+            // // <!--6%2 = 0-->
+            // // <!--1%3 = 1-->
+            // // <!--2%3 = 2-->
+            // // <!--3%3 = 0-->
+            // var i =0;
+            // i++;
+            // i %= 5;
+            // console.log(i);
+            var s = 3065;
+            // alert(parseInt(s/60) + '分' + s%60 + '秒');取整parseInt
+            // alert(Math.floor(s/60) + '分' + s%60 + '秒');Math.floor()向下取整
+            
+            var aLi = document.getElementsByTagName('li');
+            var arr = ['red', 'pink', 'green'];
+            var str = '';
+            for (var i = 0; i < aLi.length; i++) {
+                // 思路一 添加自定义属性 添加索引
+                // 思路二 鼠标移入储存 颜色值
+                aLi[i].index = i;
+                aLi[i].style.background = arr[i % arr.length];
+
+                aLi[i].onmouseover = function(){
+                    str = this.style.background;
+                    this.style.background = 'blue';
+                };
+                aLi[i].onmouseout = function(){
+                    // this.style.background = arr[this.index % arr.length];
+                    this.style.background = str;
+                };
+            };
+        };
+
+
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

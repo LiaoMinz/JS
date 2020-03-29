@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片判断</title>
+    <script>
+    window.onload = function(){
+        var OImg = document.getElementById('img1');
+
+        var onOff = true;   //开关  布尔值：只有两个值 true  真   flase 假;
+
+        OImg.onclick = function(){
+            if(onOff){
+                OImg.src ='img/2.jpg';
+                onOff = false;
+            }else{
+                OImg.src ='img/1.jpg';
+                onOff = true;
+            }
+        };    
+    };
+    
+    </script>
+</head>
+<body>
+    <img id="img1" src="img/1.jpg" alt="" width="1000">
+</body>
+</html>

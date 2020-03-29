@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取自身递增数字及匹配数组内容</title>
+    <script>
+        window.onload = function(){
+          var oBtn = document.getElementsByTagName('input');
+          var arr = ['A','B','C','D','E'];
+            for(var i=0; i<oBtn.length; i++){
+                oBtn[i].num = 0;
+                    oBtn[i].onclick = function(){
+                        this.value = arr[this.num];
+                        this.num++;
+                        if(this.num === arr.length){
+                            this.num = 0;
+                        };
+                    };
+
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="0">
+    <input type="button" value="0">
+    <input type="button" value="0">
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>块元素和内联元素</title>
+    <style>
+        .block {
+            /* 块元素特性
+                1 默认独占一行
+                2 没有宽度是默认撑满一行
+                3 支持所有css密令 
+                4 常见的快元素有: div p h1-h6 ul li ol li dl dt dd 
+                                     h5中新增的 header nav section footer 
+                
+                */
+               
+            width: 1000px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        .inline{
+            /* 行内元素特性
+                1 同一行可以继续跟着同类的标签
+                2 内容撑开宽度
+                3 不支持宽高 
+                4 不支持 上下margin 外边距 支持padding 
+                5 代码换行被解析
+                6 常见的行内元素有: a span strong em i 
+                */
+            width: 1000px;
+            height: 100px;
+            border: 1px solid blue;
+            padding:50px;
+        }
+        /* display是将标签转换为页面中显示的类型
+        display不会改变标签的本质
+            将块转换为行内
+                display：inline；
+            将行内转换为块
+                display：block；
+            当然还有一个特殊的将行内转换为行内块
+                display:inline-block;
+        
+         */
+
+    </style>
+</head>
+
+<body>
+    <div class="block"></div>
+    <span class="inline">inline 行内元素</span>
+</body>
+
+</html>

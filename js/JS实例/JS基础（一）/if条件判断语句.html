@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>条件判断语句</title>
+    <script>
+    //     if (条件表达式){//如果表达式成立  为true的话执行if里面的代码;如果为flase 则继续向下判断;
+
+    //  };
+    //  if (继续执行的表达式){
+    //     //.....
+    //  }else{
+    //     //......
+    //  };
+
+
+    //  if (条件1) {
+    //      //.......
+    //  }else if(条件1){
+    //     //......
+    //  }else if(条件2){
+
+    //  }else if(条件3){
+
+    //  }else{
+
+    //  };
+
+    window.onload = function (){//匿名函数
+        var oBtn1 = document.getElementById('btn1');
+
+        var oBtn2 = document.getElementById('btn2');
+
+        var oP = document.getElementById('p1');
+
+        var num = 15;
+
+        oBtn1.onclick = function (){
+
+            if (num > 12) {
+            
+        
+            num --;//每次减一
+
+            oP.style.fontSize = num + 'px';
+            }
+        };
+
+        oBtn2.onclick = function (){
+
+          if(num < 22) { 
+            num ++;
+              //每次加1
+            oP.style.fontSize = num + 'px';
+
+            // alert(num);
+       }
+    };
+
+};
+    
+    
+    </script>
+</head>
+<body>
+        <input id="btn1" type="button" value="-">
+    <input id="btn2" type="button" value="+">
+    <p id="p1" style="font: size 15px;">[财经]中国新零售迸发活力 外资巨头顺势而动
+            [中国网事]生命进入倒计时，她这样选择
+            [英烈谱]陈翰章：为抗日救国，绝对不叛变！
+            [向奉献者致敬]昆仑之巅一块“行走的界碑”
+            英首相特雷莎·梅在党内不信任投票中过关
+            
+            [国际时局]首相涉险过关 “脱欧”死结难解
+            [跨国公司]戴姆勒在电池领域投入超200亿美元
+            [国际观察]伊拉克要伊朗天然气 美国想谈生意
+            [史海]日军战时日记披露南京大屠杀更多细节</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态方法 ByTagName()</title>
+    <script>
+        /*    var oUl = document.getElementById('list'); //静态方法 找到一个元素 
+
+        document.getElementsByTagName('li'); //动态方法 找到多个一样的元素
+
+        var oLi = oUl.document.getElementsByTagName('li');
+
+        // oLi = [li,li,li]; 元素的集合;不是数组但是他有和数组相同功能;
+        oLi.length //3
+        oLi[0];
+        //TagName的时候 必须加上;[];不然无法使用;*/
+        window.onload = function () {
+            var oUl = document.getElementsByTagName('ul')[0];
+            var aLi = oUl.getElementsByTagName('li');
+
+            //alert(aLi.length);
+        }
+    </script>
+</head>
+
+<body>
+    <ul id="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</body>
+
+</html>

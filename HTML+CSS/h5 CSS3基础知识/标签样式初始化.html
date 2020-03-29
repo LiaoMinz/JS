@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS reset 标签样式 初始化 </title>
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        dl,
+        dd,
+        p {
+            margin: 0;
+        }
+
+        ul,
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: none;
+            vertical-align: top;
+            /* IE6下出现不兼容问题 图片会有缝隙  清除img样式解决IE: 6;不兼容问题*/
+        }
+    </style>
+</head>
+
+<body>
+    <!--CSS reset 规则：但凡浏览器的默认样式都不要去使用；
+                    因为每个浏览器下，标签的默认样式可能会出现不一致的情况；
+                    人为的将所有默认样式全部统一 （清除） 再根据实际情况（设计稿）进行设置
+
+        哪些样式是需要重置的？？
+            与盒模型相关的样式
+                border --边框
+                margin --外边距
+                padding --内边距
+
+            标签特有的样式？？  
+                ul>li
+                ol>li
+                a   
+
+            书写原则：
+                用到什么标签就清除所用标签的默认样式；
+                不建议将所有标签的全部加上，，
+                不要所有标签全部统一设置一致的reset，需根据标签默认样式来分类设置。
+                -->
+    <ul>
+        <li>this is a ul 无序列表</li>
+        <li>this is a ul 无序列表</li>
+        <li>this is a ul 无序列表</li>
+    </ul>
+    <ol>
+        <li>this is a ol 有序列表</li>
+        <li>this is a ol 有序列表</li>
+        <li>this is a ol 有序列表</li>
+    </ol>
+
+    <dl>
+        <dt>this is a 定义列表 title </dt>
+        <dd>this is a list item</dd>
+    </dl>
+
+    <h1>this is a title</h1>
+    <h2>this is a title</h2>
+    <h3>this is a title</h3>
+    <h4>this is a title</h4>
+    <h5>this is a title</h5>
+    <h6>this is a title</h6>
+
+    <p>this is a paragraph</p>
+
+    <a href="">this is a link</a>
+
+    <strong>（强调） 加粗</strong>
+
+    <em>（强调）倾斜</em>
+
+    <a href="">
+        <img src="" alt="">
+        <!--IE6下出现不兼容问题 图片会有缝隙  -->
+    </a>
+
+</body>
+
+</html>

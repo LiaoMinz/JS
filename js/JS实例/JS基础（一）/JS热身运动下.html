@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function (){
+        var oBtn1 = document.getElementById('show_btn');
+
+        var oBtn2 = document.getElementById('hide_btn');
+
+        var oDiv1 = document.getElementById('div1');
+        
+        var oStrong = document.getElementById('strong1');
+            
+            function show(){
+                oDiv1.style.display = 'block' ;
+                oDiv1.style.width = '500px' ;
+                oDiv1.style.backgroundColor = 'green' ;
+
+            };
+            oBtn1.onclick = show;
+            oStrong.onclick = show;
+            
+
+            oBtn2.onclick = function hide(){
+                oDiv1.style.display = 'none';
+            }
+
+    };
+    </script>
+    <style>
+    #div1{
+        width: 300px;
+        height: 300px;
+        background-color: #f10;
+    }
+    
+    </style>
+</head>
+<body>
+    <input id="show_btn" type="button" value="显示">
+    <input id="hide_btn" type="button" value="隐藏">
+    <strong id="strong1">我要显示div1</strong>
+    <div id="div1"></div>
+    
+</body>
+</html>

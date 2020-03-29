@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/for.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for循环小练习</title>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('nav');
+            var aLi = oDiv.getElementsByTagName('li');
+            var len = aLi.length;
+            var aUl = null; //空
+
+            for (i = 0; i < len; i++) {
+                //alert(i);
+                aUl = aLi[i].getElementsByTagName('ul');
+
+                for (var j = 0; j < aUl.length; j++) {
+                    console.log(aUl);
+                    aLi[i].onmouseover = function () {
+                        aUl[j].style.display = 'block';
+                    };
+
+                };
+            };
+
+
+        };
+    </script>
+</head>
+
+<body>
+    <div id="nav">
+        <ul class="nav_list">
+            <li>公司
+                <ul style="">
+                    <li class="text">公司介绍</li>
+                    <li class="text">公司储安</li>
+                    <li class="text">保安制服</li>
+                </ul>
+            </li>
+            <li>销售
+                <ul style="display:none;">
+                    <li class="text">公司介绍</li>
+                    <li class="text">公司储安</li>
+                    <li class="text">保安制服</li>
+                </ul>
+            </li>
+            <li>介绍
+                <ul style="display:none;">
+                    <li class="text">公司介绍</li>
+                    <li class="text">公司储安</li>
+                    <li class="text">保安制服</li>
+                </ul>
+            </li>
+            <li>联系
+                <ul style="display:none;">
+                    <li class="text">公司介绍</li>
+                    <li class="text">公司储安</li>
+                    <li class="text">保安制服</li>
+                </ul>
+            </li>
+            <li>@我
+                <ul style="display:none">
+                    <li class="text">公司介绍</li>
+                    <li class="text">公司储安</li>
+                    <li class="text">保安制服</li>
+                </ul>
+            </li>
+            <li>举报
+                <ul style="display:none">
+                    <li class="text">公司介绍</li>
+                    <li class="text">公司储安</li>
+                    <li class="text">保安制服</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

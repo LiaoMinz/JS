@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this实例应用</title>
+    <style>
+        li {
+            list-style-type: none;
+            position: relative;
+            width: 100px;
+            height: 50px;
+            float: left;
+            margin-right: 30px;
+            background-color: #f1f;
+            cursor: pointer;
+
+        }
+
+        div {
+            display: none;
+            position: absolute;
+            top: 50px;
+            width: 100px;
+            background-color: green;
+
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var aLi = document.getElementsByTagName('li');
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].onmouseover = function () {
+                    this.getElementsByTagName('div')[0].style.cssText = 'height:300px;display:block;';
+
+                };
+                aLi[i].onmouseout = function () {
+                    this.getElementsByTagName('div')[0].style.cssText = 'height:0;display:none;';
+                };
+            };
+
+
+        };
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div>1223</div>
+        </li>
+        <li>
+            <div>4444</div>
+        </li>
+        <li>
+            <div>555</div>
+        </li>
+
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for()循环 应用</title>
+    <style>
+        li {
+            height: 30px;
+            border-bottom: 1px solid #333;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oUl = document.getElementById('list');
+            var aLi = oUl.getElementsByTagName('li');
+            var arr = ['惊天','明天','后天'];
+
+            //  aLi[0].Oclick = function () {
+            //      alert(1);
+            //  };
+            //  aLi[1].Oclick = function () {
+            //      alert(1);
+            //  };
+            //  aLi[2].Oclick = function () {
+            //      alert(1);
+            // };
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].onclick = function () {
+                  //  alert([i]);
+                   
+                };
+                 aLi[i].innerHTML = arr[i];
+            };
+
+        };
+    </script>
+</head>
+
+<body>
+    <ul id="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

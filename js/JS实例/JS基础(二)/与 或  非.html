@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // && 与 ||或  ！否
+        // var a = (12<90&&20);
+        // alert(a);
+        // alert(12<20 && 30>15); 与&& 左边成立了才会继续往后看
+        // alert(12>21 || 13<10);
+        var b = (12 > 90 || 23 > 110);
+        //  alert(b); //或|| 左边条件成立就不会往后面看了 左边条件不成立才会往后继续看
+
+        var c = true;
+            // alert(!c);!取反操作
+            window.onload = function (){
+                
+                var aInput = document.getElementsByTagName('input');
+
+                aInput[0].onclick = function(){
+                    for(var i=1; i<aInput.length; i++){
+                        // aInput[i].checked = ! aInput[i].checked;
+                        if(aInput[i].checked){
+                            aInput[i].checked = false;
+                        }else{
+                            aInput[i].checked = true;
+                        }
+                    };
+                };
+            };
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="取反" id="btn">
+    <ul>
+        <li>
+            <input type="checkbox" checked name="" id="">
+        </li>
+        <li>
+            <input type="checkbox" checked name="" id="">
+        </li>
+        <li>
+            <input type="checkbox" checked name="" id="">
+        </li>
+        <li>
+            <input type="checkbox" checked name="" id="">
+        </li>
+    </ul>
+</body>
+
+</html>

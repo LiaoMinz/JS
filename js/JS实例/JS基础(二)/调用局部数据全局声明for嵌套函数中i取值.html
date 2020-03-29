@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>调用局部数据全局声明for嵌套函数中i取值</title>
+    <script>
+        // var b = 1;
+        // function fn2(b) {
+        //     alert(b); //1
+        //     b = 2;
+        // };
+        // fn2(b);
+        // alert(b);//2
+
+        // var num = 0;
+        // function fn1() {
+        //     num++;
+        // };
+        // function fn2() {
+        //     num--;
+        // };
+        // fn2();
+        // fn1();
+        // fn2();
+        // alert(num);
+        ////////////////////////////////////////////////////////////////////////////////
+
+        //局部变量可以修改全局变量
+        //想要获取函数内的值  两种方法：
+        // 1 var str = '';
+        //     function fn(){
+
+        //         var a = '大鸡腿';
+        //         str = a;
+
+        //     };
+        //     fn();
+        //     alert(str);
+        //2
+        //  function fn2(){
+        //     var a = '9999999克拉钻石jjjjjjjjjjjjjjjjjjjjjjjj';
+
+        //     fn3(a);
+        // };
+        // fn2();
+        // function fn3(a){
+        //     alert(a);
+        // };
+        //if语句 for循环  都不是域
+        //注意事项   
+        // 火狐浏览器不能对 被if括号标注的的函数进行域解析
+        alert(fn1);
+        var a = 1;
+        function fn1() {
+            alert(123);//22222222222222222222222222222222
+        };
+        if (true) {
+
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

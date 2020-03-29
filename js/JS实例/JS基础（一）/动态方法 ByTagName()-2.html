@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态方法 ByTagName()-2</title>
+    <script>
+        window.onload = function () {
+            //document.title = 123;
+            //document.body.innerHTML = 3333;
+            var aBtn = document.getElementsByTagName('input');
+
+            document.body.innerHTML =
+                '<input type="button" value="按钮"/><input type="button" value="按钮"/><input type="button"value="按钮"/>';
+            //alert(aBtn.length);
+            aBtn[0].onclick = function () {
+                alert(1);
+
+            }
+            aBtn[1].onclick = function () {
+                alert(1);
+
+            }
+            aBtn[2].onclick = function () {
+                alert(1);
+            }
+            //重复执行 某些代码
+            //每次执行的时候，有个数字在变化。
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

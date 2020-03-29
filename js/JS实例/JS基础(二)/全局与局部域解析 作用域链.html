@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全局与局部域解析 作用域链</title>
+    <script>
+        // 作用域:
+        //  域：空间 范围  区域
+        //作用： 读  写
+        /*
+        域script 全局变量  全局函数
+            自上而下
+         域 函数  json{} 
+         作用域链 由里到外，
+        
+        
+        */
+        /*
+            浏览器：
+                JS解析器
+                1 找一些东西: var function 参数
+                    第一步根据JS中的关键字去找 var function 参数
+                    a = 未定义； 
+                    在正式运行代码之前 都提前赋了一个值 ：这个值就是undefined 未定义
+                    fn1 = function fn1(){alert(2);};
+                    所有的函数 在正式运行代码之前，都是整个函数块，
+                    之前第一步 称为 JS的域解析
+                    JS 域解析
+                        遇到重名的 ：只留一个
+                            变量和函数重名了 只留下函数a
+                2逐行解读代码:
+                表达式 ： = + - * / % ++ -- ! 参数....
+                表达式可以修改域解析的值 
+        
+        */
+        // alert(a); //undefined
+        // var a = 1;  
+        // function fn1(){alert(2);};
+        //////////////////////////////////////////////////////////////////////////
+        /*
+            1 找
+             a = undefined 干掉了
+                a = function a(){alert(2);} 被干掉了
+                a = function a() { alert(4); } 留下 
+                JS 域解析
+                    遇到重名的 ：只留一个
+                    变量和函数重名了 只留下函数a
+        
+        */
+        // alert(a);   //function a() { alert(4); }
+        // var a = 1; // = 表达式
+        // alert(a);// 1  表达式可以修改域解析的值
+        // function a() { alert(2); }
+        // alert(a);  //1
+        // var a = 3;
+        // alert(a); //3
+        // function a() { alert(4); }
+
+        // alert(a); //3 
+        // alert(typeof a);
+        // a();
+        /*
+            1 找 b = undefined
+                fn2 = function fn2(){
+                    alert(b);// undefined
+                        var b = 2;
+                    };
+            2逐行解析
+                    78行
+                    b = 1 
+                    局部域
+                    b = undefined
+                    b = 2
+
+        
+        */
+
+        // var b = 1;
+        // function fn2() {
+        //     alert(b);// undefined
+        //     var b = 2;
+        // };
+        // fn2();// undefined
+        // alert(b);//1
+        // 作用域链
+        /*
+            1 找  b = undefined
+               fn2 = function fn2() {
+                 alert(b); //1
+                    b = 2;
+                };
+
+            2 解析
+            全局
+                b = 1
+
+                局部
+                1 找 没var 函数 参数  直接结束解析
+                2  局部没有 b这个变量
+                开始由里往外发生做用域链  跳到外面去找
+                在全局找到了 b = 1
+                b = 2
+
+        */
+        // var b = 1;
+        // function fn2() {
+        //     alert(b); //1
+        //     b = 2;
+        // };
+        // fn2();
+        // alert(b);//2
+        var b = 1;
+
+        function fn2(b) {
+            alert(b); //1
+            b = 2;
+        };
+        fn2();
+        alert(b);//2
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

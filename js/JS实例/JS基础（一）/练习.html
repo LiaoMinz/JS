@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/base.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习</title>
+    <script>
+        window.onload = function () {
+
+            var oImg = document.getElementById('img1');
+
+            var oText = document.getElementById('text');
+
+            var oBtn = document.getElementById('btn');
+
+            var oUl = document.getElementById('content');
+            
+            var onoff = true;//定义开关 初始化
+
+                oImg.onclick = function(){
+                    if(onoff){//onoff = true 执行if下代码 执行完后将其改变为flase 此时再点击图片时执行else下代码
+
+                        oImg.src = 'img/2.png';
+
+                   }else{
+
+                       oImg.src = 'img/1.png';
+
+                   };
+
+                   onoff = !onoff;
+                };
+                oBtn.onclick = function (){
+                  if(oText.value == ''){
+                    alert('请输入内容')
+                    oUl.innerHTML = '';
+                  };
+                  if(onoff){
+
+                    oUl.innerHTML += '<li class="fl good"><img src="img/1.png" alt=""><p>' + oText.value + '</p></li>';
+
+                  }else{
+
+                    oUl.innerHTML += ' <li class="fr good"><img src="img/2.png" alt=""><p>' + oText.value + '</p></li>';
+
+                  };
+                    
+                    oText.value = '';
+                    onoff = !onoff;
+                  
+                 
+                  
+                };
+        };
+    
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <div id="box_con">
+            <ul id="content">
+                <!--<li class="fl">
+                     <img src="img/1.png" alt="">
+                    <p>Hello World</p>
+                </li>
+                <li class="fr">
+                    <img src="img/1.png" alt="">
+                    <p>Hello World</p>
+                </li> -->
+            </ul>
+        </div>
+        <div id="inp_form">
+            <img id="img1" class="ml" src="img/1.png" alt="">
+            <input id="text" class="ml" type="text">
+            <input id="btn" class="ml" type="button" value="发送">
+        </div>
+    </div>
+</body>
+
+</html>

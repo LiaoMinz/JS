@@ -1,0 +1,152 @@
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: pink;
+}
+
+.rpm {
+    width: 1000px;
+    height: 500px;
+    margin: 200px auto;
+    position: relative;
+}
+
+#wrap img {
+    width: 1000px;
+    height: 500px;
+    border: 0;
+}
+
+#wrap .tab {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+#wrap .tab a {
+    display: block;
+    width: 80px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .4);
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+#wrap .tab a:hover {
+    background-color: rgb(231, 144, 14);
+    color: aqua;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+#dot .box {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.center {
+    width: 40%;
+    height: 50px;
+    margin: auto;
+    position: relative;
+}
+
+#dot .box .center div {
+    position: absolute;
+    width: 64px;
+    height: 44px;
+    border: 3px solid #fff;
+    float: left;
+    margin: 0 2px;
+    display: none;
+}
+
+#dot .box .center div:nth-child(2) {
+    top: 0;
+    left: 75px;
+}
+
+#dot .box .center div:nth-child(3) {
+    top: 0;
+    left: 149px;
+}
+
+#dot .box .center div:nth-child(4) {
+    top: 0;
+    left: 223px;
+}
+
+
+/* #dot .box .center */
+
+.show {
+    display: block !important;
+}
+
+.center div::after {
+    position: absolute;
+    bottom: -23px;
+    left: 20px;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 1px;
+    border: 10px solid transparent;
+    border-top-color: #fff;
+}
+
+#dot .box .center img {
+    width: 64px;
+    height: 44px;
+}
+
+#dot .dotfour {
+    position: absolute;
+    bottom: -42px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+#dot .dotfour span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333333;
+    border-radius: 50%;
+    background-color: #fff;
+    float: left;
+    margin: 0 31px;
+    cursor: pointer;
+}
+
+#dot .dotfour .active {
+    background-color: rgb(236, 165, 10);
+}

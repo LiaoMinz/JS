@@ -1,0 +1,45 @@
+{
+
+    "editor.wordWrapColumn": 0,
+
+    "html.format.wrapAttributes": "auto",
+
+    "editor.wordWrap": "on",
+
+    "update.enableWindowsBackgroundUpdates": true,
+
+    "background.customImages": ["file:///D:/438.jpg"],
+
+    "background.enabled": true,
+
+    "background.style": {
+
+        "content": "''",
+
+        "pointer-events": "none",
+
+        "position": "absolute",
+
+        "z-index": "99999",
+
+        "width": "100%",
+
+        "height": "100%",
+
+        "background-position": "center",
+
+        "background-repeat": "no-repeat",
+
+        "background-attachment": "fixed",
+
+        " background-size": "cover",
+
+        "opacity": 0.32
+
+    },
+
+    "background.useFront": true,
+
+    "background.useDefault": false
+
+}

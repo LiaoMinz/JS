@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this指向及this应用</title>
+    <script>
+        //this: 这个
+        //this:指的是调用当前方法（函数）的对象
+        //alert(this);// object window
+        //window JS 中的 '老大'
+
+        //alert(this);alert是一个方法 window.alert（this）的简写;
+
+       // function fn1(){
+           //  alert(this)
+        //}
+        //fn1();this=>window 此时this指向window对象
+        //oDiv.onclick = fn1; this=> oDiv 此时this指向 oDiv对象
+        //oDiv.onclick =function(){
+        // fn1();  fn1()里的this指向window对象
+        //};
+        //<div onclick=" this  fn1();  "></div> 
+        //此时直接用指向div这个按钮  如果//在这里调用fn1();这个函数里面的this 则this指向window对象
+        // function fn1(){
+
+        // alert(this);//window
+
+        // };
+        //window.fn1();
+</script>
+</head>
+
+<body>
+    <input id="btn1" type="button" value="an">
+
+    <input id="btn2" type="button" onclick="alert(this);fn1();" value="an2">
+    <script>
+        var oBtn = document.getElementById('btn1');
+        // oBtn.onclick = fn1;
+        oBtn.onclick = function () {
+            fn1(); //在这里调用被fn1包住的this时 此时this指向的将不再是oBtn这按钮对象  而指的是window这个对象;
+        };
+    </script>
+</body>
+
+</html>
