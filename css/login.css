@@ -62,7 +62,7 @@ header {
     display: block;
     background-image: url("../image/iphone.png");
     background-repeat: no-repeat;
-    background-position: 30% center;
+    background-position: center center;
     background-size: auto auto;
     /* background-color: blue; */
 }
