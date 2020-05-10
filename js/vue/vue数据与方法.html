@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue数据与方法</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">{{a}}
+    </div>
+    <script>
+        var data = {
+            a: 1
+        }
+        var vm = new Vue({
+            el: '#app',
+            data: data,
+        });
+        // data.a = 'hello liaomin';
+        vm.$watch('a', function(newVal, oldVal) {
+            console.log(newVal, oldVal);
+        })
+        vm.$data.a = 'test';
+    </script>
+</body>
+
+</html>
