@@ -1,23 +1,35 @@
-body,span,p,img{
+body,
+span,
+p,
+img {
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
-#content{
+
+#content {
     position: relative;
-    width: 1000px;
-    height: 500px;
-    margin: 80px auto;
+    width: 100vw;
+    height: 90vh;
+    margin: 0 auto;
 }
+
 #span1 {
     display: block;
     text-align: center;
     line-height: 21.82px;
     background-color: skyblue;
 }
-.tab{
+
+img {
+    width: 100vw;
+    height: 90vh;
+}
+
+.tab {
     display: block;
     position: absolute;
     top: 215.5px;
@@ -26,21 +38,26 @@ a{
     /* background-color:skyblue; */
     background-image: url(../img/icon-slides.png);
 }
-.left{
+
+.left {
     background-position: -83px 0;
     left: 0;
 }
-.left:hover{
-   background-position: -1px 0;
+
+.left:hover {
+    background-position: -1px 0;
 }
-.right{
+
+.right {
     background-position: 40px 0;
     right: 0;
 }
-.right:hover{
+
+.right:hover {
     background-position: -43px 0;
 }
-#loading{
+
+#loading {
     display: block;
     text-align: center;
     line-height: 21.82px;

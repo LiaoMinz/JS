@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>练习2</title>
     <script>
-        window.onload = function () {
+        window.onload = function() {
 
             var oSpan = document.getElementById('span1');
             var oImg = document.getElementById('img1');
@@ -20,8 +20,9 @@
 
             var num = 0; //初始化
             var timer = null;
-			
+
             clearInterval(timer);
+
             function oTab() {
                 oSpan.innerHTML = num + 1 + '/' + arrText.length;
 
@@ -30,21 +31,21 @@
                 oLoading.innerHTML = arrText[num];
             };
             oTab();
-			
-            function autoplay(){
-                timer = setInterval(function(){
+
+            function autoplay() {
+                timer = setInterval(function() {
                     Tab();
-                },1000)
+                }, 1000)
             };
             autoplay();
-            oImg.onmouseover = function(){
+            oImg.onmouseover = function() {
                 clearInterval(timer);
             };
-            oImg.onmouseout = function(){
+            oImg.onmouseout = function() {
                 autoplay();
             };
-            
-            oBtnLeft.onclick = function(){
+
+            oBtnLeft.onclick = function() {
 
                 Tab();
             };
@@ -60,11 +61,11 @@
                 // oImg.src = arrImgUrl[num];
 
                 // oLoading.innerHTML = arrText[num];
-                
+
 
             };
 
-            oBtnRight.onclick = function () {
+            oBtnRight.onclick = function() {
                 num--;
                 if (num == -1) {
                     num = arrText.length - 1;
