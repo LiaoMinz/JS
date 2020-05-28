@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>vue指令语法</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p v-if="seen">你现在看到我了</p>
+			<a v-bind:href="url">vuejs官网</a>
+			<div  @click="click1">
+				<div  @click.stop="click2">
+					come on
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue ({
+				el:'#app',
+				data:{
+					seen: false,
+					url:'https://cn.vuejs.org',
+					
+				},
+				methods : {
+					click1:function(){
+					
+
+						console.log('click1................');
+					},
+					click2:function(){
+							var Things = 'ksksksssaaasdad';
+						for (var i = 0; i < Things.length; i++) {
+							Things[i]
+								console.log('click2..................' + i);
+						}
+					
+					}
+				}
+				
+			});
+		</script>
+	</body>
+</html>

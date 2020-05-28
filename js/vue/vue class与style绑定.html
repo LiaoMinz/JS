@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue class与style绑定</title>
+		
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.active{
+				background-color: #00FFFF;
+				margin: 0.625rem auto;
+			}
+			.text{
+				color:red;
+				border: 0.3125rem solid #000000;
+			}
+			.green{
+				font-size: 1.875rem;
+			}
+			.text-danger{
+				border: 0.3125rem solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div 
+			class="text"
+			v-bind:class="[isActive?'active' :'' ,isGreen? 'green' :'']"
+			style="width: 200px;height: 200px; text-align: center;line-height: 12.5rem;">
+				hi Vue
+			</div>
+			<div id="" v-bind:class="classObject" style="width: 12.5rem; height: 9.375rem;">
+				
+			</div>
+		</div>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					isActive:true,
+					isGreen:false,
+					
+					 classObject:{ //对象实例方法 两种方式一样
+						active:true,
+						'text-danger':true,
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
