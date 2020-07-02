@@ -1,0 +1,36 @@
+header{
+	width: 100vw;
+	height: 5.1875rem;
+	background-color: #00FFFF;
+	text-align: center;
+	line-height:5.1875rem;
+	
+}
+header .fanhu{
+	position: relative;
+	top: 0;
+	left:1.625rem;
+	display: block;
+	width: 1.875rem;
+	height: 5rem;
+	background-image: url(../image/150%25%20fanhui.png) ;
+	background-repeat: no-repeat;
+	background-position: center; 
+	
+	
+}
+#head h1{
+	color: #FFFFFF;
+	font-size: 1rem;
+	font-weight: normal;
+/* 	background-color: #000000; */
+	position: relative;
+	left: 0;
+	top: -5rem;
+}
+.warp{
+	width: 45rem;
+	height: 20.4375rem;
+	background-image: url(../image/H.png) ;
+	background-repeat: no-repeat;
+}
