@@ -17,7 +17,11 @@
         }
         var vm = new Vue({
             el: '#app',
-            data: data,
+            data(){
+				return data
+					
+				
+			} 
         });
         // data.a = 'hello liaomin';
         vm.$watch('a', function(newVal, oldVal) {

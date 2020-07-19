@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vue模板语法</title>
-    <script src="vue.js"></script>
-    <style>
-        .pink {
-            background-color: pink;
-        }
-        
-        .red {
-            font-size: 50px;
-            background-color: brown;
-        }
-		#list-item{
-			width: 100vw;
-			height: 20vh;
-			background-color: #00FFFF;
-		}
-    </style>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>vue模板语法</title>
+		<script src="vue.js"></script>
+		<style>
+			body{
+				margin: 0;
+			}
+			.pink {
+				background-color: pink;
+			}
 
-<body>
-    <div id="app">
-        {{msg}}
-        <p v-html=rawHtml></p>
-        <div v-bind:class="color"> 你好</div>
-        <p>{{Number + 1}}</p>
-		<p>{{ok? 'YES':'NO'}}</p>
-		<p>{{ message.split('').reverse().join('') }}</p><!-- 对字符串进行拆分后反续重组uoyevoli -->
-		<div v-bind:id="'list-' + id">{{msg}}</div>
-    </div>
-    <script>
-        var vm = new Vue({
-            el: '#app',
-            data: {
-                msg: 'hi vue',
-                rawHtml: '<span style = "color:skyblue;">我说你没地</span>',
-                color: 'red',
-                Number: 10,
-				ok: 1 == 0,
-				message:'iloveyou',
-				id:'item',
-				
-            }
+			.red {
+				font-size: 50px;
+				background-color: brown;
+			}
 
-        })
-    </script>
+			#list-item {
+				width: 100vw;
+				height: 20vh;
+				background-color: #00FFFF;
+			}
+		</style>
+	</head>
 
-</body>
+	<body>
+		<div id="app">
+			{{msg}}
+			<p v-html = rawHtml></p>
+			<div v-bind:class="color"> 你好</div>
+			<p>{{Number + 1}}</p>
+			<p>{{ok? 'YES':'NO'}}</p>
+			<p>{{ message.split('').reverse().join('') }}</p><!-- 对字符串进行拆分后反续重组uoyevoli -->
+			<div v-bind:id="'list-' + id">{{msg}}</div>
+		</div>
+		<script>
+			var vm = new Vue({
+				el: '#app',
+				data() {
+					return {
+						msg: 'hi vue',
+						rawHtml: '<span style = "background-color:skyblue;">我说你没地</span>',
+						color: 'red',
+						Number: 10,
+						ok: 1 == 0,
+						message: 'i love you',
+						id: 'item',
+
+					}
+				}
+
+			})
+		</script>
+
+	</body>
 
 </html>

@@ -14,9 +14,11 @@
     <script>
         var vm = new Vue({
             el: '#vm',
-            data: {
-                msg: 'hi V',
-                date: 'new date()'
+            data() {
+               return{
+				   msg: 'hi V',
+				    date: 'new date()'
+			   } 
             },
             // 在实例初始化之后，数据观测（data observer）和event /watcher 事件配置之前被调用
             beforeCreate: function() {
